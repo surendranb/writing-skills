@@ -1,66 +1,70 @@
 <p align="center">
-  <img src="logo.svg" alt="Writing Skills Logo" width="120" />
+  <img src="logo.svg" alt="writing-skills logo" width="96" />
 </p>
 
-# Writing Skills 🖋️
+# writing-skills
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PyPI](https://img.shields.io/pypi/v/writing-skills)](https://pypi.org/project/writing-skills/)
+**14 writing-style skills for AI agents: 7 measurable frameworks, 7 character voices.**
+Plain `SKILL.md` files — no code, no server. Works in any agent that reads skills
+(Claude Code, opencode, Codex, Cursor, Kiro, Gemini).
+
 [![npm](https://img.shields.io/npm/v/writing-skills)](https://www.npmjs.com/package/writing-skills)
-
-**Procedural writing-style skills for AI agents — official frameworks, not vibes.**
-
-Ready-made `SKILL.md` packages: plain language, business writing, corporate
-communication, GOV.UK, AP style, STE-100, dev docs — each with numbered mechanics
-and a **verifiable checklist** the agent must pass. Compatible with any agent that
-reads SKILL.md (opencode, Claude Code, Codex, Kiro, Gemini).
-
-## Skills
-
-### Frameworks
-
-| Skill | What it enforces |
-| :--- | :--- |
-| `plain-language` | Plain Writing Act clarity. Sentences ≤25 words, passive ≤10%, jargon ban list. |
-| `business-writing` | Executive comms. BLUF in the first line, explicit ask + deadline, buzzword ban list. |
-| `corporate-communication` | Company announcements. News first, reader impact explicit, zero euphemism. |
-| `gov-uk-style` | Public-sector readability. Keyword-first headings, ≤25-word sentences, ≤5-sentence paragraphs. |
-| `asd-ste100` | Safety-critical technical prose. One instruction per sentence, controlled vocabulary, no idioms. |
-| `google-dev-docs` | Developer documentation. Active voice, present tense, verb-first headings, runnable examples. |
-| `journalism-ap` | Factual reporting. AP attribution and number rules, zero editorializing. |
-
-### Voices
-
-`ted-lasso` · `jack-sparrow` · `shrek` · `yoda` · `winnie-the-pooh` · `paddington` · `bob-ross`
+[![PyPI](https://img.shields.io/pypi/v/writing-skills)](https://pypi.org/project/writing-skills/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ## Install
 
+```bash
+npx skills add writing-skills
+```
+
+One command, every agent on your machine.
+
+<details>
+<summary>Other install methods</summary>
+
 | Harness | Command |
 | :--- | :--- |
-| **Any agent** (recommended) | `npx skills add writing-skills` — detects and installs into every agent on your machine |
-| **Claude Code** (plugin) | `/plugin marketplace add surendranb/writing-skills` then `/plugin install writing-skills@writing-skills` |
-| **Codex ≥ 0.147 / Kiro** | `git clone https://github.com/surendranb/writing-skills.git` — `plugin.json` is auto-discovered (Agent Plugins 1.0) |
-| **npm** | `npm install writing-skills` |
-| **Python** | `uv add writing-skills` or `pip install writing-skills` |
+| Claude Code plugin | `/plugin marketplace add surendranb/writing-skills` then `/plugin install writing-skills@writing-skills` |
+| Codex ≥ 0.147 / Kiro | `git clone https://github.com/surendranb/writing-skills.git` — `plugin.json` is auto-discovered |
+| npm | `npm install writing-skills` |
+| Python | `uv add writing-skills` or `pip install writing-skills` |
+
+</details>
 
 ## Use
 
-Ask for a style and the skill loads automatically:
+Ask for the style. The skill loads itself.
 
-> "rewrite this in plain language"
-> "make this a BLUF business update"
-> "write the press release in AP style"
-> "say it like Ted Lasso"
+> "rewrite this in plain language" · "make this a BLUF business update" ·
+> "press release in AP style" · "say it like Yoda"
 
-Every framework skill ends with a `Verify` checklist (sentence caps, passive-voice
-scans, ban lists, readability targets) the agent must pass before delivering.
+Every skill ends with a `Verify` checklist the agent must pass before it delivers.
+
+## The skills
+
+### Frameworks — real standards, enforced
+
+| Skill | Enforces |
+| :--- | :--- |
+| `plain-language` | Plain Writing Act. Sentences ≤25 words, passive ≤10%, jargon ban list. |
+| `business-writing` | BLUF first line, explicit ask + deadline, buzzword ban list. |
+| `corporate-communication` | News first, reader impact named, zero euphemism. |
+| `gov-uk-style` | GOV.UK guide. Keyword-first headings, ≤5-sentence paragraphs. |
+| `asd-ste100` | Simplified Technical English. One instruction per sentence, no idioms. |
+| `google-dev-docs` | Google style. Active voice, present tense, verb-first headings. |
+| `journalism-ap` | AP Stylebook. Attribution, number rules, zero editorializing. |
+
+### Voices — characters, rate-limited against caricature
+
+`ted-lasso` · `jack-sparrow` · `shrek` · `yoda` · `winnie-the-pooh` · `paddington` · `bob-ross`
 
 ## Contribute
 
-Start from [template/SKILL.md](template/SKILL.md) and see [CONTRIBUTING.md](CONTRIBUTING.md).
-Every skill must pass `python3 scripts/validate_skills.py` — frontmatter, verifiable
-mechanics, a `Verify` checklist, and two transform examples are enforced by CI.
+Copy [template/SKILL.md](template/SKILL.md), fill it, run
+`python3 scripts/validate_skills.py`. CI enforces the contract — see
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-MIT — [Surendran B](https://github.com/surendranb). See [LICENSE](LICENSE).
+MIT — [Surendran B](https://github.com/surendranb)
