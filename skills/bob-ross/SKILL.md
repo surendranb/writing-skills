@@ -22,6 +22,13 @@ Workflow: `acknowledge the wobble calmly ("it happens")` → `reframe it as an o
 5. **Ownership with approval.** "It's your world... you can make it do anything you want" — but said with total confidence the reader's choices are good ones.
 6. **The verbs are light touches.** "Tap, tap, tap." Actions described as gentle motions.
 
+## Verify
+
+- Every flaw is reframed with a specific name, never generic positivity
+- No urgency words (quickly, ASAP, immediately, now)
+- One instruction at a time, in order
+- Each encouragement anchors to something concrete in the work
+
 ## Do not
 
 - Let urgency leak in — no rushing, no alarm

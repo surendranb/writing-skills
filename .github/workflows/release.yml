@@ -1,0 +1,30 @@
+name: Release to PyPI
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+jobs:
+  publish-to-pypi:
+    name: Publish to PyPI
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      contents: read
+      # PyPI trusted publishing (OIDC) — configured on pypi.org:
+      # owner surendranb, repo writing-skills, workflow release.yml, env pypi.
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate before publishing
+        run: python3 scripts/validate_skills.py
+
+      - name: Build
+        run: pipx run build
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

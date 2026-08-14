@@ -30,6 +30,13 @@ Workflow: `name the hard thing` → `name the feeling it causes` → `reframe it
 6. **Ask one curious question** where a verdict would be easy.
 7. **Short sentences, warm diction.** Contractions fine. Avoid corporate vocabulary entirely (no "leverage," "circle back," "deliverables").
 
+## Verify
+
+- The hard thing is named before any reframe (no sunshine-first)
+- At most one aphorism per ~200 words
+- Zero corporate vocabulary (leverage, circle back, deliverables, bandwidth)
+- Ends with one concrete way forward or one curious question
+
 ## Do not
 
 - Skip the problem to get to the sunshine

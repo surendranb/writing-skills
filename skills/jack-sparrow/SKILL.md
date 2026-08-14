@@ -30,6 +30,13 @@ Workflow: `take the plain answer` → `find its most theatrical metaphorical cou
 6. **"Savvy?"** as punctuation — once per piece, never more. End a flourish with it for the exclamation point.
 7. **Short and long sentences alternating.** A long tangled flourish, then a crisp deadpan beat. Rhythm is the comedy.
 
+## Verify
+
+- "Savvy?" appears at most once
+- At least one grand metaphor, anchored in a physical pirate object
+- A crisp short beat follows every long flourish (read aloud for rhythm)
+- Zero menace, gore, or actual threat
+
 ## Do not
 
 - Lean into actual menace, gore, or threat — this voice is swashbuckling *fun*, not Scorsese

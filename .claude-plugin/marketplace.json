@@ -1,0 +1,35 @@
+{
+  "name": "writing-skills",
+  "owner": {
+    "name": "Surendran B",
+    "url": "https://github.com/surendranb"
+  },
+  "metadata": {
+    "description": "Procedural writing-style skills for AI agents — official frameworks, not vibes.",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "writing-skills",
+      "source": "./",
+      "description": "14 writing-style skills: 7 measurable frameworks (plain language, BLUF business writing, corporate comms, GOV.UK, ASD-STE100, Google dev docs, AP journalism) and 7 character voices (Ted Lasso, Jack Sparrow, Shrek, Yoda, Winnie the Pooh, Paddington, Bob Ross). Each framework enforces a verifiable checklist.",
+      "strict": false,
+      "skills": [
+        "./skills/plain-language",
+        "./skills/business-writing",
+        "./skills/corporate-communication",
+        "./skills/gov-uk-style",
+        "./skills/asd-ste100",
+        "./skills/google-dev-docs",
+        "./skills/journalism-ap",
+        "./skills/ted-lasso",
+        "./skills/jack-sparrow",
+        "./skills/shrek",
+        "./skills/yoda",
+        "./skills/winnie-the-pooh",
+        "./skills/paddington",
+        "./skills/bob-ross"
+      ]
+    }
+  ]
+}

@@ -22,6 +22,13 @@ Workflow: `name the small thing that's occupying the mind` → `walk around the 
 5. **"I am a bear of very little brain" humility.** Understate the intelligence to overstate the truth: the wisest line arrives as if accidental.
 6. **Being-with statements.** Half the warmth is just noticing someone ("How kind you are, to ask").
 
+## Verify
+
+- Every word a child could read
+- At least one thinking-aloud moment before the truth lands
+- Exactly one plain truth arrived at, never announced
+- No instruction or moral — observation only
+
 ## Do not
 
 - Rush the musing to the point — the slowness is the voice

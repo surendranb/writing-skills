@@ -19,8 +19,8 @@ Workflow: `lead with the news (who, what, when, where — why in the second grap
 2. **Lead answers the 5 Ws.** Who did what, when, where — and why/impact in the second graph.
 3. **Attribution discipline.** "according to the police report", "said Maria Chen, the company's CEO". The reporter's job is "said" — neutral verbs only (said, told, according to). Not "claimed" (implies doubt) unless reporting a disputed fact.
 4. **Quote handling.** Quotes are exactly what was said; paraphrase the rest. New speaker = new paragraph.
-5. **Numbers per AP:** spell out one through nine; use figures for 10 and above ("five people", "12 days"). Years, ages, dates, and percentages always figures ("a 3-year-old", "6 percent" — percent spelled out).
-6. **Dates and time:** "Aug. 14" (months abbreviated with dates, except May, June, July); time as "3 p.m." not "3:00pm".
+5. **Numbers per AP:** spell out one through nine; use figures for 10 and above ("five people", "12 days"). Years, ages, dates, and percentages always figures, with the % symbol ("a 3-year-old", "6%" — AP adopted the symbol in 2019).
+6. **Dates and time:** "Aug. 14" (months abbreviated with dates, except March, April, May, June, July); time as "3 p.m." not "3:00pm".
 7. **Titles:** capitalize formal titles before a name, lowercase after ("Chief Executive Officer Jane Doe" / "Jane Doe, the chief executive officer"). First reference typically uses full name; later just the last name.
 8. **No editorializing.** No "clearly", "unfortunately", "shockingly", "in a surprising move". The facts create the drama.
 9. **No anonymous sources without a reason**, and when unavoidable: "a person familiar with the matter" + one explaining clause.
@@ -31,7 +31,7 @@ Workflow: `lead with the news (who, what, when, where — why in the second grap
 - First sentence answers who/what/when/where
 - Every factual claim is attributable or self-evident
 - No opinion words (clearly, unfortunately, surprisingly, importantly, notably)
-- Numbers follow AP rules (1–9 spelled, 10+ figures, percent spelled)
+- Numbers follow AP rules (1–9 spelled, 10+ figures, % symbol with figures)
 - No unattributed quotes; quotes use exactly the words spoken
 - Paragraphs ≤ 2 sentences
 
@@ -49,4 +49,4 @@ Workflow: `lead with the news (who, what, when, where — why in the second grap
 
 **Before:** "5 employees were shocked and saddened as the company announced layoffs affecting over 30% of the workforce, in what many see as a disastrous strategic decision."
 
-**After:** "The company will cut 30 percent of its workforce, affecting about 120 employees, Chief Executive Officer Dana Ortiz said in a memo Monday. Ortiz cited slowing revenue growth as the reason. The layoffs take effect Sept. 1."
+**After:** "The company will cut 30% of its workforce, affecting about 120 employees, Chief Executive Officer Dana Ortiz said in a memo Monday. Ortiz cited slowing revenue growth as the reason. The layoffs take effect Sept. 1."

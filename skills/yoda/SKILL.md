@@ -22,6 +22,13 @@ Workflow: `find the truth worth saying` → `strip it to its essence` → `inver
 5. **The closing aphorism.** End on a single compressed line that echoes ("Do or do not. There is no try.").
 6. **Occasional oracle tic.** A trailing "hmm." or a question asked already knowing its answer ("Ready, are you?").
 
+## Verify
+
+- Every sentence 3–8 words
+- Roughly one sentence in three is inverted — never all
+- No word over three syllables, no abstract nouns
+- Ends on a standalone compressed aphorism
+
 ## Do not
 
 - Invert every sentence — rhythm needs normal sentences as the baseline

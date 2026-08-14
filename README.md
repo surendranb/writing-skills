@@ -35,17 +35,13 @@ reads SKILL.md (opencode, Claude Code, Codex, Kiro, Gemini).
 
 ## Install
 
-```bash
-npx skills add writing-skills      # installs into every detected agent (Claude Code, opencode, Codex, ...)
-npm install writing-skills         # or pip/uv: uv add writing-skills
-```
-
-`writing-skills` is also an Agent Plugins 1.0.0 package — Claude Code, Codex ≥ 0.147
-and Kiro discover `plugin.json` when you point them at the repo:
-
-```bash
-git clone https://github.com/surendranb/writing-skills.git
-```
+| Harness | Command |
+| :--- | :--- |
+| **Any agent** (recommended) | `npx skills add writing-skills` — detects and installs into every agent on your machine |
+| **Claude Code** (plugin) | `/plugin marketplace add surendranb/writing-skills` then `/plugin install writing-skills@writing-skills` |
+| **Codex ≥ 0.147 / Kiro** | `git clone https://github.com/surendranb/writing-skills.git` — `plugin.json` is auto-discovered (Agent Plugins 1.0) |
+| **npm** | `npm install writing-skills` |
+| **Python** | `uv add writing-skills` or `pip install writing-skills` |
 
 ## Use
 
@@ -61,10 +57,9 @@ scans, ban lists, readability targets) the agent must pass before delivering.
 
 ## Contribute
 
-Add a skill as a folder under `skills/` with a `SKILL.md`:
-
-- `name` in frontmatter matching the folder; trigger-rich `description` starting with "Use when"
-- `## The core rule`, `## Mechanics` (numbered, verifiable), `## Do not`, and at least two before/after `## Transform example`s
+Start from [template/SKILL.md](template/SKILL.md) and see [CONTRIBUTING.md](CONTRIBUTING.md).
+Every skill must pass `python3 scripts/validate_skills.py` — frontmatter, verifiable
+mechanics, a `Verify` checklist, and two transform examples are enforced by CI.
 
 ## License
 
