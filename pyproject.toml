@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "writing-skills"
+version = "0.1.1"
+description = "Procedural writing-style skills for AI agents — official frameworks, not vibes."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+authors = [{ name = "Surendran B" }]
+keywords = ["agent-skills", "writing", "writing-style", "voice", "copywriting", "opencode", "claude-code"]
+
+[project.urls]
+Homepage = "https://github.com/surendranb/writing-skills"
+Repository = "https://github.com/surendranb/writing-skills"
+
+[tool.hatch.build.targets.wheel]
+packages = []
+force-include = { "plugin.json" = "plugin.json", "skills" = "skills" }
