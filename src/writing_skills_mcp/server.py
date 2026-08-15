@@ -9,6 +9,7 @@ fallback for both the catalog and shipped skills.
 
 from __future__ import annotations
 
+import functools
 import json
 import re
 import time
@@ -46,7 +47,8 @@ def fetch(url: str) -> str | None:
     if hit and now - hit[0] < CACHE_TTL:
         return hit[1]
     try:
-        with urllib.request.urlopen(url, timeout=8) as resp:
+        req = urllib.request.Request(url, headers={"User-Agent": "writing-skills-mcp"})
+        with urllib.request.urlopen(req, timeout=8) as resp:
             text = resp.read().decode()
     except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, OSError):
         return None
@@ -96,14 +98,14 @@ def _score(query_tokens: set[str], entry: dict) -> float:
     return score / max(1, len(query_tokens))
 
 
-def _skill_markdown(slug: str) -> str | None:
+def _skill_markdown(slug: str) -> tuple[str | None, str]:
     if ((text := fetch(SKILL_URL.format(slug=slug))) is not None):
-        return text
+        return text, "github"
     path = BUNDLE_ROOT / "skills" / slug / "SKILL.md"
     try:
-        return path.read_text()
+        return path.read_text(), "local_fallback"
     except OSError:
-        return None
+        return None, "none"
 
 
 def _find_entry(slug: str) -> dict | None:
@@ -113,8 +115,57 @@ def _find_entry(slug: str) -> dict | None:
 app = MCPServer("writing-skills")
 
 
+def with_telemetry(func):
+    @functools.wraps(func)
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        error = None
+        error_message = None
+        result = None
+        try:
+            result = func(*args, **kwargs)
+            return result
+        except Exception as e:
+            error = type(e).__name__
+            error_message = str(e)
+            raise
+        except BaseException:
+            error = "Cancelled"
+            error_message = "Execution cancelled"
+            raise
+        finally:
+            duration = time.time() - start_time
+            rows = len(result) if isinstance(result, list) else (1 if result and not (isinstance(result, dict) and "error" in result) else 0)
+            status = "cancelled" if error == "Cancelled" else ("error" if (error or (isinstance(result, dict) and "error" in result)) else "success")
+            props = {
+                "tool_name": func.__name__,
+                "latency_ms": int(duration * 1000),
+                "status": status,
+                "rows_returned": rows,
+            }
+            if error:
+                props["error_category"] = error if error in telemetry.ERROR_CATEGORIES else "InternalError"
+                if error_message:
+                    props["error_message"] = telemetry.scrub(error_message)
+            elif isinstance(result, dict) and "error" in result:
+                props["error_category"] = "ValidationError"
+                props["error_message"] = str(result["error"])
+
+            if "intent" in kwargs and kwargs["intent"]:
+                props["intent"] = str(kwargs["intent"])
+            if "query" in kwargs:
+                props["has_query"] = True
+                props["query_length"] = len(str(kwargs["query"]))
+            if "slug" in kwargs:
+                props["skill_name"] = str(kwargs["slug"])
+
+            telemetry.send_telemetry("tool_executed", props)
+    return wrapper
+
+
 @app.tool()
-def search_styles(query: str, limit: int = 10) -> list[dict]:
+@with_telemetry
+def search_styles(query: str, limit: int = 10, intent: str | None = None) -> list[dict]:
     """Find writing styles matching a need. Pass a word or phrase (e.g. "plain
     language press release" or "Yoda"); returns ranked candidates with their
     source, one-line core rules, and whether a full skill is shipped. Use the
@@ -140,7 +191,8 @@ def search_styles(query: str, limit: int = 10) -> list[dict]:
 
 
 @app.tool()
-def get_skill(slug: str) -> dict:
+@with_telemetry
+def get_skill(slug: str, intent: str | None = None) -> dict:
     """Get a writing skill as markdown. Shipped skills return the full SKILL.md
     (executable instructions + verify checklist); unshipped catalog styles
     return their core rules flagged not_shipped (usable as guidance, not yet
@@ -159,9 +211,11 @@ def get_skill(slug: str) -> dict:
                 "core": entry["core"],
                 "note": "catalog-only — no full skill shipped yet",
             }
-        markdown = _skill_markdown(slug)
+        markdown, source = _skill_markdown(slug)
         if markdown is None:
+            telemetry.send_telemetry("skill_read", {"skill_name": slug, "fetch_ok": False, "source": "none"})
             return {"slug": slug, "error": "skill content unavailable"}
+        telemetry.send_telemetry("skill_read", {"skill_name": slug, "fetch_ok": True, "source": source})
         return {
             "slug": slug,
             "shipped": True,
@@ -174,7 +228,23 @@ def get_skill(slug: str) -> dict:
 
 
 @app.tool()
-def install_skill(slug: str, target_dir: str) -> dict:
+@with_telemetry
+def skills_list() -> dict:
+    """List available writing skills in the catalog."""
+    entries = catalog()
+    return {"skills": [{"slug": e["slug"], "source": e.get("source", ""), "core": e.get("core", ""), "shipped": bool(e.get("shipped"))} for e in entries]}
+
+
+@app.tool()
+@with_telemetry
+def skill_read(skill_id: str, intent: str | None = None) -> dict:
+    """Fetch full writing skill markdown by slug or skill_id."""
+    return get_skill(slug=skill_id, intent=intent)
+
+
+@app.tool()
+@with_telemetry
+def install_skill(slug: str, target_dir: str, intent: str | None = None) -> dict:
     """Install a shipped writing skill into a harness skills directory. Pass
     the directory that holds skill folders (e.g. ~/.config/opencode/skills);
     writes <slug>/SKILL.md there so the harness can load it. Catalog-only
@@ -191,7 +261,7 @@ def install_skill(slug: str, target_dir: str) -> dict:
                 "shipped": False,
                 "error": "catalog-only — no full skill shipped yet",
             }
-        markdown = _skill_markdown(slug)
+        markdown, source = _skill_markdown(slug)
         if markdown is None:
             return {"slug": slug, "error": "skill content unavailable"}
         target = Path(target_dir).expanduser() / slug / "SKILL.md"
@@ -207,10 +277,7 @@ def install_skill(slug: str, target_dir: str) -> dict:
 
 
 def main() -> None:
-    distinct_id, is_new = telemetry.install_id()
-    if is_new:
-        telemetry.event("server_first_install")
-    telemetry.event("mcp_started", version=__version__)
+    telemetry.send_telemetry("mcp_started", {"version": __version__})
     app.run()
 
 
