@@ -1,0 +1,1952 @@
+[
+  {
+    "slug": "18f-content-guide",
+    "source": "18F (GSA) content guide",
+    "core": "Plain language; sentence-case headings; active voice; avoid \"consumer\"",
+    "shipped": false
+  },
+  {
+    "slug": "aida",
+    "source": "St. Elmo Lewis 1898",
+    "core": "Attention \u2192 Interest \u2192 Desire \u2192 Action; hook first sentence",
+    "shipped": false
+  },
+  {
+    "slug": "adams-absurd-digression",
+    "source": "Douglas Adams, Hitchhiker's Guide",
+    "core": "absurd premise escalation; digression within digression; bathos punctures the cosmic",
+    "shipped": false
+  },
+  {
+    "slug": "adler-fragmented-aphorism",
+    "source": "Renata Adler, Speedboat",
+    "core": "fragmented vignettes; verdict-sharp sentences; discontinuity as form",
+    "shipped": false
+  },
+  {
+    "slug": "agee-lyric-reportage",
+    "source": "James Agee, Let Us Now Praise Famous Men",
+    "core": "lyric prose + documentary; biblical cadence; self-questioning witness",
+    "shipped": false
+  },
+  {
+    "slug": "aglc-legal-citation",
+    "source": "Australian Guide to Legal Citation 4th ed.",
+    "core": "footnote citations; cross-references as \"n 12\"; case names italicized",
+    "shipped": false
+  },
+  {
+    "slug": "ama-manual",
+    "source": "AMA Manual of Style 11th ed.",
+    "core": "superscript citations; six authors then \"et al.\"; generic drug names lowercase",
+    "shipped": false
+  },
+  {
+    "slug": "amazon-6-pager",
+    "source": "Jeff Bezos, 2004 memo practice",
+    "core": "narrative prose, no bullets; memo read aloud at meeting start",
+    "shipped": false
+  },
+  {
+    "slug": "anadiplosis",
+    "source": "rhetorical device",
+    "core": "last word of clause becomes first of next",
+    "shipped": false
+  },
+  {
+    "slug": "anaphora",
+    "source": "classical trope",
+    "core": "repeat opening words across successive clauses (\"We shall fight\u2026\")",
+    "shipped": false
+  },
+  {
+    "slug": "ann-handley",
+    "source": "Ann Handley, Everybody Writes 2014",
+    "core": "TUFD \u2014 write the ugly first draft; reader knows nothing; grammar is brand",
+    "shipped": false
+  },
+  {
+    "slug": "antithesis",
+    "source": "classical trope",
+    "core": "paired opposites in parallel structure; second clause is the verdict",
+    "shipped": false
+  },
+  {
+    "slug": "apa-style",
+    "source": "APA 7th ed.",
+    "core": "author-date citations; DOI in references; five heading levels",
+    "shipped": false
+  },
+  {
+    "slug": "aposiopesis",
+    "source": "classical figure",
+    "core": "break off mid-sentence; the silence is the assertion",
+    "shipped": false
+  },
+  {
+    "slug": "apple-style",
+    "source": "Apple Style Guide",
+    "core": "exact product-name capitalization; imperative UI copy; no generic trademark use",
+    "shipped": false
+  },
+  {
+    "slug": "asimov-clear-expository",
+    "source": "Isaac Asimov, Foundation",
+    "core": "transparent prose, ideas foregrounded; dialogue-driven; problem\u2192consequence logic",
+    "shipped": false
+  },
+  {
+    "slug": "atlassian-writing",
+    "source": "Atlassian developer docs",
+    "core": "friendly tone; active voice; \"we\"/\"you\" distinction",
+    "shipped": false
+  },
+  {
+    "slug": "atomic-habits-writing",
+    "source": "James Clear, Atomic Habits 2018 + 3-2-1 newsletter",
+    "core": "4 laws applied to writing (obvious/attractive/easy/satisfying); systems over goals",
+    "shipped": false
+  },
+  {
+    "slug": "austen-free-indirect-irony",
+    "source": "Jane Austen, Pride and Prejudice",
+    "core": "free indirect discourse; ironic understatement; \"but\"-pivot balanced syntax",
+    "shipped": false
+  },
+  {
+    "slug": "australian-gov-style",
+    "source": "Australian Government Style Manual",
+    "core": "plain English; Australian spelling; inclusive language; web-first",
+    "shipped": false
+  },
+  {
+    "slug": "aydca/aidca",
+    "source": "Strong 1925",
+    "core": "AIDA + Conviction",
+    "shipped": false
+  },
+  {
+    "slug": "baker-hyper-observation",
+    "source": "Nicholson Baker, The Mezzanine",
+    "core": "page-long footnotes + sub-footnotes; dense detail of mundane objects; micro-analysis as plot",
+    "shipped": false
+  },
+  {
+    "slug": "balaji-network-state",
+    "source": "Balaji Srinivasan, The Network State 2022",
+    "core": "coin concepts and argue them into existence; dense hyperlinks; threads as first drafts",
+    "shipped": false
+  },
+  {
+    "slug": "baldwin-oratorical-moral",
+    "source": "James Baldwin, Notes of a Native Son",
+    "core": "oratorical rhythm (parallelism, anaphora); moral witness; blues cadence; direct \"we/you\"",
+    "shipped": false
+  },
+  {
+    "slug": "bangs-gonzo-criticism",
+    "source": "Lester Bangs",
+    "core": "criticism as confession; humor + rage in one paragraph; punk honesty",
+    "shipped": false
+  },
+  {
+    "slug": "bant",
+    "source": "IBM sales training 1950s",
+    "core": "Budget, Authority, Need, Timeline",
+    "shipped": false
+  },
+  {
+    "slug": "barthes-death-author",
+    "source": "Roland Barthes 1967",
+    "core": "text is a tissue of quotations; reader makes meaning",
+    "shipped": false
+  },
+  {
+    "slug": "bbc-news-style",
+    "source": "BBC News Style Guide",
+    "core": "\"said\" not \"claimed/admitted\"; ages as \"a 40-year-old man\"; spell out acronyms first use",
+    "shipped": false
+  },
+  {
+    "slug": "benchley-little-man",
+    "source": "Robert Benchley, The Treasurer's Report",
+    "core": "befuddled-common-man persona; puns; commonplace presented as remarkable",
+    "shipped": false
+  },
+  {
+    "slug": "benedict-evans",
+    "source": "Benedict Evans newsletter",
+    "core": "data-rich annual trend memos; skeptical of hype; \"technology is eating the world\" lineage",
+    "shipped": false
+  },
+  {
+    "slug": "ben-horowitz",
+    "source": "The Hard Thing About Hard Things 2014",
+    "core": "wartime vs peacetime CEO; name the Struggle; hip-hop-infused war stories",
+    "shipped": false
+  },
+  {
+    "slug": "bloomberg-way",
+    "source": "The Bloomberg Way",
+    "core": "lead with the number; numerals everywhere; specify currency and time zone; explain \"why now\"",
+    "shipped": false
+  },
+  {
+    "slug": "bluebook",
+    "source": "The Bluebook 21st ed. (legal)",
+    "core": "footnote authorities; \"Id.\"; Table T1 jurisdiction formats",
+    "shipped": false
+  },
+  {
+    "slug": "bluf",
+    "source": "US military comms doctrine",
+    "core": "bottom line up front; then supporting detail",
+    "shipped": false
+  },
+  {
+    "slug": "borges-labyrinth",
+    "source": "Jorge Luis Borges, Ficciones",
+    "core": "essayistic fiction with fake scholarship; labyrinth/mirror imagery; paradox in plain declaratives",
+    "shipped": false
+  },
+  {
+    "slug": "boron-letters",
+    "source": "Gary Halbert, The Boron Letters",
+    "core": "seduction copy; hot-prospect question; curiosity gap; nothing read past first sentence",
+    "shipped": false
+  },
+  {
+    "slug": "bradbury-zen",
+    "source": "Ray Bradbury, Zen in the Art of Writing",
+    "core": "zest and gusto; noun-list ignition; library as fuel; feel then revise",
+    "shipped": false
+  },
+  {
+    "slug": "bradbury-lyrical",
+    "source": "Ray Bradbury, Fahrenheit 451",
+    "core": "metaphor-dense lyric chains; sensory catalogues; repetition with variation; elegiac closings",
+    "shipped": false
+  },
+  {
+    "slug": "breslin-working-class-column",
+    "source": "Jimmy Breslin",
+    "core": "working-class vernacular; big events from the little guy; dialogue-heavy street scenes",
+    "shipped": false
+  },
+  {
+    "slug": "bryson-explain-humor",
+    "source": "Bill Bryson, A Walk in the Woods",
+    "core": "travel explainer with digressions as structure; chain-of-facts lists; self-deprecating narrator",
+    "shipped": false
+  },
+  {
+    "slug": "burroughs-cut-up",
+    "source": "William S. Burroughs, Naked Lunch",
+    "core": "cut-up technique; no linear narrative; clinical body/tech imagery",
+    "shipped": false
+  },
+  {
+    "slug": "business-writing",
+    "source": "executive comms canon",
+    "core": "BLUF first line; explicit ask + deadline; buzzword ban list",
+    "shipped": true
+  },
+  {
+    "slug": "campbell-monomyth",
+    "source": "Joseph Campbell 1949 / Vogler 1992",
+    "core": "separation \u2192 initiation \u2192 return; 12-17 hero's journey stages",
+    "shipped": false
+  },
+  {
+    "slug": "canada-ca-style",
+    "source": "Canada.ca content style guide",
+    "core": "plain language; sentence case; \"we\"/\"you\" address",
+    "shipped": false
+  },
+  {
+    "slug": "capa-close",
+    "source": "Robert Capa (\"get close\")",
+    "core": "proximity reporting \u2014 quotes, smells, faces; close-up is the story",
+    "shipped": false
+  },
+  {
+    "slug": "capote-nonfiction-novel",
+    "source": "Truman Capote, In Cold Blood",
+    "core": "fiction techniques on factual events; no editorializing; humanize both sides",
+    "shipped": false
+  },
+  {
+    "slug": "carver-minimalist",
+    "source": "Raymond Carver, What We Talk About\u2026",
+    "core": "sentences under 15 words; subtext via omission; no adverbs; endings cut before resolution",
+    "shipped": false
+  },
+  {
+    "slug": "chekhov-gun",
+    "source": "Anton Chekhov",
+    "core": "every element must earn its place; gun on wall fires by act 3",
+    "shipped": false
+  },
+  {
+    "slug": "chandler-hardboiled-simile",
+    "source": "Raymond Chandler, The Big Sleep",
+    "core": "deflating \"as\u2026as\" similes; wisecrack dialogue; first-person noir",
+    "shipped": false
+  },
+  {
+    "slug": "challenger",
+    "source": "Dixon & Adamson 2011",
+    "core": "teach, tailor, take control",
+    "shipped": false
+  },
+  {
+    "slug": "chiasmus",
+    "source": "classical trope",
+    "core": "ABBA reversal (\"ask not what your country\u2026\"); the inversion carries the punch",
+    "shipped": false
+  },
+  {
+    "slug": "chicago-manual",
+    "source": "CMOS 18th ed.",
+    "core": "notes-bibliography or author-date; em dashes without spaces; headline capitalization",
+    "shipped": false
+  },
+  {
+    "slug": "chip-heath-succes",
+    "source": "Made to Stick 2007",
+    "core": "Simple, Unexpected, Concrete, Credible, Emotional, Stories; curse of knowledge is the enemy",
+    "shipped": false
+  },
+  {
+    "slug": "christie-red-herring",
+    "source": "Agatha Christie",
+    "core": "closed suspect set; red herrings + one concealed clue; final monologue reverses assumptions",
+    "shipped": false
+  },
+  {
+    "slug": "churchill-rhythm",
+    "source": "Churchill speeches 1940",
+    "core": "short Anglo-Saxon words; anaphora; tricolons; rhythm of the will to victory",
+    "shipped": false
+  },
+  {
+    "slug": "cialdini-influence",
+    "source": "Influence 1984 + 2021",
+    "core": "reciprocity, scarcity, authority, consistency, liking, social proof, unity",
+    "shipped": false
+  },
+  {
+    "slug": "cia-style",
+    "source": "CIA Style Manual 8th ed.",
+    "core": "GPO-aligned usage; intelligence terminology; acronym spell-out",
+    "shipped": false
+  },
+  {
+    "slug": "clean-prose",
+    "source": "corporate Babel cure",
+    "core": "kill \"utilize/facilitate/interface with\"; de-nominalize; one page one ask",
+    "shipped": false
+  },
+  {
+    "slug": "collier-letter-book",
+    "source": "Robert Collier 1931",
+    "core": "enter the conversation in the customer's mind; the leaping analogy bridge; one-page letters",
+    "shipped": false
+  },
+  {
+    "slug": "conrad-delayed-decoding",
+    "source": "Joseph Conrad, Heart of Darkness",
+    "core": "frame narrative; impression first, meaning later; murky elevated prose",
+    "shipped": false
+  },
+  {
+    "slug": "corporate-communication",
+    "source": "change/announcement comms",
+    "core": "news first; reader impact explicit; zero euphemism",
+    "shipped": true
+  },
+  {
+    "slug": "creac",
+    "source": "legal writing practice",
+    "core": "Conclusion \u2192 Rule \u2192 Explanation \u2192 Application \u2192 Conclusion",
+    "shipped": false
+  },
+  {
+    "slug": "cy2a",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "dalio-principles",
+    "source": "Ray Dalio, Principles 2017",
+    "core": "radical transparency + truthfulness; idea meritocracy; pain + reflection = progress",
+    "shipped": false
+  },
+  {
+    "slug": "dan-abramov",
+    "source": "overreacted.io",
+    "core": "first-person technical narratives; one idea to depth; build the metaphor in view; opinion with reasoning",
+    "shipped": false
+  },
+  {
+    "slug": "dan-luu",
+    "source": "danluu.com",
+    "core": "\"I did the measurement\" empiricism; evidence over anecdote; engineering as it actually is",
+    "shipped": false
+  },
+  {
+    "slug": "dhh-basecamp",
+    "source": "Rework 2010",
+    "core": "contrarian aphorisms (\"planning is guessing\"); small over big; cut features with confidence",
+    "shipped": false
+  },
+  {
+    "slug": "diaz-spanglish-voice",
+    "source": "Junot D\u00edaz, Oscar Wao",
+    "core": "Spanglish code-switching; no quotation marks; footnotes + pop-culture digressions; direct \"you\"",
+    "shipped": false
+  },
+  {
+    "slug": "dickens-victorian-exaggeration",
+    "source": "Dickens",
+    "core": "one exaggerated trait + verbal tic per character; cliffhanger chapters; hyperbole + pathos; long lists",
+    "shipped": false
+  },
+  {
+    "slug": "didion-detached",
+    "source": "Joan Didion, The White Album",
+    "core": "short terse declaratives; detached irony at catastrophe; incantatory repetition; \"I\" as unreliable witness",
+    "shipped": false
+  },
+  {
+    "slug": "dillard-mystic-nature",
+    "source": "Annie Dillard, Pilgrim at Tinker Creek",
+    "core": "scientific detail + religious awe; first-person pilgrimage; long ecstatic sentences",
+    "shipped": false
+  },
+  {
+    "slug": "dissoi-logoi",
+    "source": "~400 BCE fragment",
+    "core": "argue both sides before choosing; strongest argument built from the opposite side",
+    "shipped": false
+  },
+  {
+    "slug": "docker-docs-style",
+    "source": "Docker docs",
+    "core": "\"you\" address; active voice; consistent command formatting",
+    "shipped": false
+  },
+  {
+    "slug": "dpayne-feature",
+    "source": "magazine feature craft",
+    "core": "scene, character, tension, movement; section-break hooks; ending returns to opening image",
+    "shipped": false
+  },
+  {
+    "slug": "dreyer-english",
+    "source": "Benjamin Dreyer 2019",
+    "core": "rules are launch pads not cages; cut \"rather/very/little/pretty\"; clich\u00e9 list awareness",
+    "shipped": false
+  },
+  {
+    "slug": "duarte-sparkline",
+    "source": "Nancy Duarte, Resonate 2010",
+    "core": "oscillate between \"what is\" and \"what could be\"; audience is the hero",
+    "shipped": false
+  },
+  {
+    "slug": "duolingo-style",
+    "source": "Duolingo writing style",
+    "core": "playful never childish; short sentences plain words; write like you speak",
+    "shipped": false
+  },
+  {
+    "slug": "dubliners-epiphany",
+    "source": "Joyce, Dubliners",
+    "core": "story builds to a silent internal epiphany; \"scrupulous meanness\" \u2014 only what is observed",
+    "shipped": false
+  },
+  {
+    "slug": "ebert-conversational-criticism",
+    "source": "Roger Ebert",
+    "core": "plain conversational criticism; verdict-forward with argument; generosity; anecdote + craft",
+    "shipped": false
+  },
+  {
+    "slug": "economist-style",
+    "source": "The Economist Style Guide 12th ed.",
+    "core": "\"per cent\" not \"%\"; ban \"very\"; preserve which/that; no \"whilst\"",
+    "shipped": false
+  },
+  {
+    "slug": "elbow-freewriting",
+    "source": "Peter Elbow, Writing Without Teachers",
+    "core": "freewrite to discover; the editor comes second",
+    "shipped": false
+  },
+  {
+    "slug": "ellis-flat-affect",
+    "source": "Bret Easton Ellis, American Psycho",
+    "core": "flat deadpan over violence; brand catalogue specificity; present tense",
+    "shipped": false
+  },
+  {
+    "slug": "elmore-leonard",
+    "source": "10 Rules of Writing",
+    "core": "no weather openings, no prologues; only \"said\"; no adverbs; no \"suddenly\"",
+    "shipped": false
+  },
+  {
+    "slug": "empty-states",
+    "source": "NN/g",
+    "core": "explain state, why it matters, next action",
+    "shipped": false
+  },
+  {
+    "slug": "epigraph-practice",
+    "source": "classical",
+    "core": "one borrowed line frames the thesis; never explain it",
+    "shipped": false
+  },
+  {
+    "slug": "ephron-funny-first-person",
+    "source": "Nora Ephron",
+    "core": "punchy short paragraphs; parenthetical asides; food + romantic failure as material",
+    "shipped": false
+  },
+  {
+    "slug": "error-message-copy",
+    "source": "NN/g + Microsoft",
+    "core": "what happened, why, how to fix; no jargon; actionable",
+    "shipped": false
+  },
+  {
+    "slug": "ethos-pathos-logos",
+    "source": "Aristotle, Rhetoric",
+    "core": "credibility, emotion, logic; arrange by strength",
+    "shipped": false
+  },
+  {
+    "slug": "eulogy-structure",
+    "source": "NYT practice",
+    "core": "acknowledge loss, specific stories, name virtues, address the living, close with hope",
+    "shipped": false
+  },
+  {
+    "slug": "executive-summary",
+    "source": "HBR practice",
+    "core": "one page: decision, recommendation, context, trade-offs, ask; numbers before adjectives",
+    "shipped": false
+  },
+  {
+    "slug": "executive-memo",
+    "source": "HBR practice",
+    "core": "BLUF, context, options, recommendation, action items",
+    "shipped": false
+  },
+  {
+    "slug": "faulkner-stream-of-consciousness",
+    "source": "Faulkner, Sound and the Fury",
+    "core": "100+ word sentences; interior monologue; mid-sentence timeline shifts; gothic lexicon",
+    "shipped": false
+  },
+  {
+    "slug": "federal-plain-language",
+    "source": "Plain Writing Act 2010 + plainlanguage.gov",
+    "core": "know the audience; active voice; short sentences; logical order",
+    "shipped": false
+  },
+  {
+    "slug": "ferriss-style",
+    "source": "Tim Ferriss",
+    "core": "deconstruct top performers into tactics; fear-setting; experiments over opinions; 2 bad pages a day",
+    "shipped": false
+  },
+  {
+    "slug": "field-screenplay",
+    "source": "Syd Field, Screenplay 1979",
+    "core": "three acts divided at plot points; start as late as possible",
+    "shipped": false
+  },
+  {
+    "slug": "fitzgerald-elegant-romantic",
+    "source": "Gatsby",
+    "core": "balanced parallel sentences; \"as if\" similes on the mundane; glamorous detail catalogues; lyrical reversals",
+    "shipped": false
+  },
+  {
+    "slug": "fogg-behavior-model",
+    "source": "BJ Fogg",
+    "core": "Behavior = Motivation \u00d7 Ability \u00d7 Prompt",
+    "shipped": false
+  },
+  {
+    "slug": "fowler-dictum",
+    "source": "Fowler, Modern English Usage 1926",
+    "core": "familiar word over far-fetched; concrete over abstract; single word over circumlocution",
+    "shipped": false
+  },
+  {
+    "slug": "freytag-pyramid",
+    "source": "Freytag 1863",
+    "core": "exposition, rising action, climax, falling action, denouement",
+    "shipped": false
+  },
+  {
+    "slug": "ft-style",
+    "source": "Financial Times Guide to Style",
+    "core": "\"said\" not \"stated\"; -ise spellings; no \"very\"; numerals for statistics",
+    "shipped": false
+  },
+  {
+    "slug": "gaiman-mythic-gentle",
+    "source": "Neil Gaiman",
+    "core": "short mythic cadence; dream-logic stated matter-of-factly; wry first-person asides",
+    "shipped": false
+  },
+  {
+    "slug": "gary-vee",
+    "source": "Jab Jab Jab Right Hook 2013",
+    "core": "give value first, then ask; document don't create; attention is the asset",
+    "shipped": false
+  },
+  {
+    "slug": "gettysburg-engine",
+    "source": "Lincoln 1863",
+    "core": "272 words; past \u2192 present \u2192 future; build to abstraction last",
+    "shipped": false
+  },
+  {
+    "slug": "gladwell-anecdote-theory",
+    "source": "The Tipping Point",
+    "core": "hook with anecdote, then the theory; counterintuitive thesis; \"two kinds of X\"",
+    "shipped": false
+  },
+  {
+    "slug": "glass-wall-decision-memo",
+    "source": "decision-memo craft",
+    "core": "state assumptions, counterarguments, fallback; line-defensible",
+    "shipped": false
+  },
+  {
+    "slug": "gonzo",
+    "source": "Hunter S. Thompson",
+    "core": "first-person participant; hyperbolic digression; mythic self-presentation; reporting = experience",
+    "shipped": false
+  },
+  {
+    "slug": "gopnik-wild-exactitude",
+    "source": "Adam Gopnik",
+    "core": "precision in love with facts; conversational leaps; philosophy of the everyday; comic tonal shift",
+    "shipped": false
+  },
+  {
+    "slug": "google-dev-docs",
+    "source": "Google developer style guide",
+    "core": "\"you\" not \"we\"; active voice; sentence-case headings; present tense",
+    "shipped": true
+  },
+  {
+    "slug": "gov-uk-style",
+    "source": "GOV.UK Style Guide",
+    "core": "plain English; active voice; \"we\" not \"I\"; keyword-first headings",
+    "shipped": true
+  },
+  {
+    "slug": "gpo-style",
+    "source": "GPO Style Manual",
+    "core": "39 chapters of capitalization/abbreviation/symbol rules; executive-branch basis",
+    "shipped": false
+  },
+  {
+    "slug": "gowers-plain-words",
+    "source": "Ernest Gowers, Plain Words 1948",
+    "core": "avoid jargon; short familiar words; cut redundancy",
+    "shipped": false
+  },
+  {
+    "slug": "gruber-linked-list",
+    "source": "John Gruber, Daring Fireball",
+    "core": "one-paragraph commentary + link daily; ruthless clarity",
+    "shipped": false
+  },
+  {
+    "slug": "guardian-style",
+    "source": "Guardian & Observer",
+    "core": "ban \"very\"; \"one in three\" not \"a third\"; no \"currently\"",
+    "shipped": false
+  },
+  {
+    "slug": "halbert-selling-sentences",
+    "source": "Boron Letters",
+    "core": "one sentence that would sell alone; hunt it in revision; place where the eye lands",
+    "shipped": false
+  },
+  {
+    "slug": "hardwick-critical-lyricism",
+    "source": "Elizabeth Hardwick",
+    "core": "lyrical criticism; aphoristic colloquial-intellectual voice; mosaic form",
+    "shipped": false
+  },
+  {
+    "slug": "harmon-story-circle",
+    "source": "Dan Harmon 8 steps",
+    "core": "You \u2192 Need \u2192 Go \u2192 Search \u2192 Find \u2192 Take \u2192 Return \u2192 Change",
+    "shipped": false
+  },
+  {
+    "slug": "hemingway-iceberg",
+    "source": "Hemingway",
+    "core": "sentences under 12 words, declarative; nouns/verbs carry emotion; omit what's inferable",
+    "shipped": false
+  },
+  {
+    "slug": "hendiadys",
+    "source": "classical doubling",
+    "core": "two nouns for one idea (\"sound and fury\") slows and elevates",
+    "shipped": false
+  },
+  {
+    "slug": "herr-fragmented-war",
+    "source": "Michael Herr, Dispatches",
+    "core": "fragmented first-person reportage; movie-reference texture; survivor-voice irony",
+    "shipped": false
+  },
+  {
+    "slug": "hitchens-oratorical-invective",
+    "source": "Hitch-22",
+    "core": "oratorical combative cascade; rhetorical questions; thesis \u2192 escalation \u2192 annihilation",
+    "shipped": false
+  },
+  {
+    "slug": "hopkins-scientific",
+    "source": "Claude Hopkins 1923",
+    "core": "ads pay for themselves; give a reason to buy; measurable response devices",
+    "shipped": false
+  },
+  {
+    "slug": "hbr-style",
+    "source": "Harvard Business Review",
+    "core": "case-led opening; research-backed claims; actionability; evidence before assertion",
+    "shipped": false
+  },
+  {
+    "slug": "ibm-style",
+    "source": "The IBM Style Guide",
+    "core": "\"you\" not \"we\"; non-gendered; consistent terminology",
+    "shipped": false
+  },
+  {
+    "slug": "ieee-style",
+    "source": "IEEE Editorial Style Manual",
+    "core": "bracketed numeric citations; six authors then et al.; period punctuation",
+    "shipped": false
+  },
+  {
+    "slug": "imrad",
+    "source": "scientific standard",
+    "core": "Introduction, Methods, Results, Discussion",
+    "shipped": false
+  },
+  {
+    "slug": "intuit-content-design",
+    "source": "Intuit content design",
+    "core": "be human; plain language; active voice; helpful before clever",
+    "shipped": false
+  },
+  {
+    "slug": "inverted-pyramid",
+    "source": "Civil War-era wire tradition",
+    "core": "most important first; cuttable from the bottom",
+    "shipped": false
+  },
+  {
+    "slug": "investor-update",
+    "source": "Brad Feld template",
+    "core": "metrics, highlights, challenges, asks, calendar",
+    "shipped": false
+  },
+  {
+    "slug": "irak/IRAC",
+    "source": "US legal memo",
+    "core": "Issue \u2192 Rule \u2192 Application \u2192 Conclusion",
+    "shipped": false
+  },
+  {
+    "slug": "ishiguro-unreliable-restraint",
+    "source": "Ishiguro, Remains of the Day",
+    "core": "self-deceiving narrator; understatement where feeling peaks; memory circles the wound",
+    "shipped": false
+  },
+  {
+    "slug": "iso-directives",
+    "source": "ISO/IEC Part 2",
+    "core": "shall = requirement, should = recommendation, may = permission",
+    "shipped": false
+  },
+  {
+    "slug": "ivins-texas-wit",
+    "source": "Molly Ivins",
+    "core": "Texas colloquial wit; invective + humor; \"you can't make this stuff up\"",
+    "shipped": false
+  },
+  {
+    "slug": "jack-son-calm-menace",
+    "source": "Shirley Jackson, The Lottery",
+    "core": "calm communal we-voice; horror in grocery tone; implication only",
+    "shipped": false
+  },
+  {
+    "slug": "james-qualified-consciousness",
+    "source": "Henry James",
+    "core": "nesting qualifications mirror consciousness; inner perception over events",
+    "shipped": false
+  },
+  {
+    "slug": "james-wood-instant",
+    "source": "How Fiction Works",
+    "core": "get the instant right; noticing what the reader half-noticed",
+    "shipped": false
+  },
+  {
+    "slug": "jfk-borrow",
+    "source": "JFK speeches",
+    "core": "borrow the masters' cadence; phrase-test rhythm; write to be read aloud",
+    "shipped": false
+  },
+  {
+    "slug": "jiang/dreyer",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "joel-spolsky",
+    "source": "Joel on Software",
+    "core": "witty didactic essays; the Joel Test; concrete examples over abstractions",
+    "shipped": false
+  },
+  {
+    "slug": "johnson-fractured-lyric",
+    "source": "Denis Johnson, Jesus' Son",
+    "core": "plain surface ruptured by lyric bursts; sketch scenes; hallucinatory calm",
+    "shipped": false
+  },
+  {
+    "slug": "journalism-ap",
+    "source": "AP Stylebook",
+    "core": "numbers 1-9 spelled; titles only before names; \"said\" not \"stated\"; no editorializing",
+    "shipped": true
+  },
+  {
+    "slug": "joyce-reporting",
+    "source": "Portrait/Ulysses",
+    "core": "reporter's eye \u2014 exact names, streets, times; mundane detail carries meaning",
+    "shipped": false
+  },
+  {
+    "slug": "julia-evans",
+    "source": "jvns.ca",
+    "core": "concrete example first, generalize after; no jargon walls; explain simply",
+    "shipped": false
+  },
+  {
+    "slug": "kael-conversational-cinephile",
+    "source": "Pauline Kael",
+    "core": "conversational visceral judgment; no academic jargon; contrarian takes",
+    "shipped": false
+  },
+  {
+    "slug": "kapuscinski-fable-reportage",
+    "source": "The Emperor",
+    "core": "reportage as fable/allegory; political systems as parables; atmosphere over documentation",
+    "shipped": false
+  },
+  {
+    "slug": "kevin-kelly",
+    "source": "68 Bits of Unsolicited Advice",
+    "core": "aphorism density; one compressed observation per line; \"be the only\"",
+    "shipped": false
+  },
+  {
+    "slug": "kerouac-spontaneous-prose",
+    "source": "On the Road",
+    "core": "first-thought-best-thought; breath paragraphs; jazz syncopation",
+    "shipped": false
+  },
+  {
+    "slug": "kidder-soul",
+    "source": "The Soul of a New Machine",
+    "core": "the found story; people before themes; earn the access then be accurate",
+    "shipped": false
+  },
+  {
+    "slug": "kill-your-darlings",
+    "source": "Quiller-Couch 1916",
+    "core": "delete the passage you love most before sending",
+    "shipped": false
+  },
+  {
+    "slug": "king-conversational-horror",
+    "source": "Stephen King",
+    "core": "plain conversational prose; domestic detail first, horror increments; \"what if\" hooks",
+    "shipped": false
+  },
+  {
+    "slug": "king-on-writing",
+    "source": "On Writing 2000",
+    "core": "1,000 words/day; kill adverbs; door closed then open; read a lot",
+    "shipped": false
+  },
+  {
+    "slug": "klosterman-thought-experiment",
+    "source": "But What If We're Wrong?",
+    "core": "thought-experiment essays; paradox + wry extrapolation; cultural counterfactuals",
+    "shipped": false
+  },
+  {
+    "slug": "kiss",
+    "source": "Kelly Johnson, Skunk Works",
+    "core": "keep it simple",
+    "shipped": false
+  },
+  {
+    "slug": "kubernetes-docs",
+    "source": "kubernetes.io style",
+    "core": "imperative mood; sentence-case headings; \"you\" address",
+    "shipped": false
+  },
+  {
+    "slug": "lamb-palimpsest",
+    "source": "Charles Lamb 1822",
+    "core": "every text carries the ghost of prior drafts",
+    "shipped": false
+  },
+  {
+    "slug": "landing-page",
+    "source": "Unbounce / NN/g",
+    "core": "hero (headline, subhead, CTA), proof, single goal",
+    "shipped": false
+  },
+  {
+    "slug": "lardner-dumb-narrator",
+    "source": "You Know Me Al",
+    "core": "self-deluded first-person; phonetic spelling; deadpan satire",
+    "shipped": false
+  },
+  {
+    "slug": "last-line-craft",
+    "source": "craft doctrine",
+    "core": "last line is the reader's takeaway; verb or image, not summary; frame against the first line",
+    "shipped": false
+  },
+  {
+    "slug": "lebowitz-aphorism-crank",
+    "source": "Fran Lebowitz",
+    "core": "aphoristic one-liner paragraphs; cranky simplification; deadpan hauteur",
+    "shipped": false
+  },
+  {
+    "slug": "leguin-spare-wisdom",
+    "source": "Le Guin",
+    "core": "clear unadorned prose; parable shape; mythic naming; poetic restraint",
+    "shipped": false
+  },
+  {
+    "slug": "leo-nickname",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "leonard-10-rules",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "lewis-character-narrative",
+    "source": "Michael Lewis",
+    "core": "character-driven narrative; metaphor for complex systems; underdog arc; present-tense scenes",
+    "shipped": false
+  },
+  {
+    "slug": "liebling-erudite-wit",
+    "source": "A.J. Liebling",
+    "core": "erudite first-person essays; food and boxing as high art; long periodic sentences",
+    "shipped": false
+  },
+  {
+    "slug": "lift",
+    "source": "Chris Goward",
+    "core": "value proposition + clarity, relevance, distraction, anxiety, urgency",
+    "shipped": false
+  },
+  {
+    "slug": "listicle",
+    "source": "HubSpot",
+    "core": "hook intro; numbered self-contained items; scannable headers; CTA",
+    "shipped": false
+  },
+  {
+    "slug": "litotes",
+    "source": "classical understatement",
+    "core": "assert by negating the opposite (\"no small feat\")",
+    "shipped": false
+  },
+  {
+    "slug": "lolita-sentence",
+    "source": "Nabokov",
+    "core": "the coiled long sentence; sound+image+meaning per clause; craft is content",
+    "shipped": false
+  },
+  {
+    "slug": "lovecraft-cosmic-dread",
+    "source": "Lovecraft",
+    "core": "cosmic-scale adjectives; archaizing purple diction; withheld revelation",
+    "shipped": false
+  },
+  {
+    "slug": "mailer-novel-history",
+    "source": "The Armies of the Night",
+    "core": "third-person self as character; hybrid novel-history; maximal self-conscious prose",
+    "shipped": false
+  },
+  {
+    "slug": "mailchimp-style",
+    "source": "Mailchimp Content Style Guide",
+    "core": "Oxford comma; \"you\" for reader; humor with guardrails",
+    "shipped": false
+  },
+  {
+    "slug": "malcolm-investigative-essay",
+    "source": "Janet Malcolm",
+    "core": "power dynamics exposed mid-narrative; unsettling questions left open",
+    "shipped": false
+  },
+  {
+    "slug": "mamet-memo",
+    "source": "David Mamet 2007",
+    "core": "scene = two guys with a gun; drama in the attempt; every scene a question",
+    "shipped": false
+  },
+  {
+    "slug": "managing-up-docs",
+    "source": "boss-friendly report craft",
+    "core": "the decision you need first; 3 options with a recommendation; so-what in line one",
+    "shipped": false
+  },
+  {
+    "slug": "marquez-magical-realism",
+    "source": "One Hundred Years of Solitude",
+    "core": "supernatural stated matter-of-factly; long nested sentences; cyclical family time",
+    "shipped": false
+  },
+  {
+    "slug": "mccarthy-minimal-punctuation",
+    "source": "Cormac McCarthy, The Road",
+    "core": "no quotation marks; paratactic \"and\" chains; biblical diction",
+    "shipped": false
+  },
+  {
+    "slug": "mckee-story",
+    "source": "Story 1997",
+    "core": "gap between expectation and result drives scenes; value charges swing; inciting incident",
+    "shipped": false
+  },
+  {
+    "slug": "mcphee-structure",
+    "source": "John McPhee, Draft No. 4",
+    "core": "explicit structural architecture; Chinese-box composition; writer visible in draft",
+    "shipped": false
+  },
+  {
+    "slug": "mdn-write-style",
+    "source": "MDN",
+    "core": "\"you\" perspective; no marketing language; technical accuracy first",
+    "shipped": false
+  },
+  {
+    "slug": "mencken-sarcastic-erudite",
+    "source": "H.L. Mencken",
+    "core": "bombastic erudite sarcasm; mock-scholarly polysyllabics; invective as sport",
+    "shipped": false
+  },
+  {
+    "slug": "message-box",
+    "source": "Nancy Duarte",
+    "core": "one-slide frame: message center, why-now/challenges/solutions/stakeholders quadrants",
+    "shipped": false
+  },
+  {
+    "slug": "microsoft-style",
+    "source": "Microsoft Writing Style Guide",
+    "core": "plain language; sentence case; avoid \"please\"; global audience",
+    "shipped": false
+  },
+  {
+    "slug": "minto-pyramid",
+    "source": "Barbara Minto 1987",
+    "core": "answer first; MECE grouping; conclusion at top, arguments beneath",
+    "shipped": false
+  },
+  {
+    "slug": "mitchell-quiet-oral-history",
+    "source": "Joseph Mitchell",
+    "core": "let subjects talk, then edit; restrained reporter; marginal lives dignified",
+    "shipped": false
+  },
+  {
+    "slug": "mla-style",
+    "source": "MLA 9th ed.",
+    "core": "author-page citations; Works Cited; italic titles; et al. for 3+",
+    "shipped": false
+  },
+  {
+    "slug": "moore-pun-wit",
+    "source": "Lorrie Moore",
+    "core": "punning titles; wry asides; comic surface over tragic core",
+    "shipped": false
+  },
+  {
+    "slug": "morrison-oral-tradition",
+    "source": "Toni Morrison",
+    "core": "call-and-response repetition; non-linear time; lyrical interiority; coined words",
+    "shipped": false
+  },
+  {
+    "slug": "munro-chekhovian",
+    "source": "Alice Munro",
+    "core": "time jumps without transitions; quiet epiphany; domestic detail as meaning",
+    "shipped": false
+  },
+  {
+    "slug": "murakami-quiet-surreal",
+    "source": "Murakami",
+    "core": "flat affectless first-person; surreal into routine; unexplained metaphors literal; loneliness",
+    "shipped": false
+  },
+  {
+    "slug": "murdoch-attention",
+    "source": "Iris Murdoch, Sovereignty of Good 1970",
+    "core": "attention as the writer's door; look don't moralize",
+    "shipped": false
+  },
+  {
+    "slug": "nabokov-wordplay",
+    "source": "Nabokov",
+    "core": "multilingual puns; unreliable self-aware narrator; parody ensembles",
+    "shipped": false
+  },
+  {
+    "slug": "nancy-duarte",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "nara-style",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "nasdaq",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "nasa-style",
+    "source": "NASA STI writing resources",
+    "core": "GPO-based conventions; STI report standards",
+    "shipped": false
+  },
+  {
+    "slug": "netflix-timed-text",
+    "source": "Netflix subtitles",
+    "core": "42 chars/line max; 2 lines max; minimum display duration",
+    "shipped": false
+  },
+  {
+    "slug": "new-hart-rules",
+    "source": "Oxford UP 2nd ed.",
+    "core": "-ise spellings; en rule for ranges; parallel punctuation",
+    "shipped": false
+  },
+  {
+    "slug": "new-journalism (wolfe)",
+    "source": "Tom Wolfe 1973",
+    "core": "scene-by-scene construction; dialogue; third-person from inside; status-life details",
+    "shipped": false
+  },
+  {
+    "slug": "newsletter-anatomy",
+    "source": "Email on Acid",
+    "core": "subject, preview, sender, hero, content blocks, single CTA",
+    "shipped": false
+  },
+  {
+    "slug": "nhs-digital",
+    "source": "NHS service manual",
+    "core": "plain English; researched content; \"we\" from NHS perspective",
+    "shipped": false
+  },
+  {
+    "slug": "nicolas-cole",
+    "source": "Ship 30 for 30",
+    "core": "four writing styles (instructional/persuasive/narrative/descriptive); specificity is soul of narrative; ship daily",
+    "shipped": false
+  },
+  {
+    "slug": "nut-graf",
+    "source": "WSJ/Poynter",
+    "core": "after the lead, the \"why should I care\" paragraph carrying stakes",
+    "shipped": false
+  },
+  {
+    "slug": "ny-times-style",
+    "source": "NYT Manual 2024",
+    "core": "em dashes unspaced; lowercase seasons; \"more than\" for quantity",
+    "shipped": false
+  },
+  {
+    "slug": "oates-reading",
+    "source": "Joyce Carol Oates, Faith of a Writer",
+    "core": "style absorbed by immersion; reading trains the ear; write daily",
+    "shipped": false
+  },
+  {
+    "slug": "obama-cadence",
+    "source": "Obama 2008",
+    "core": "balanced antithesis; anaphora (\"Yes we can\")",
+    "shipped": false
+  },
+  {
+    "slug": "oconnor-grotesque-grace",
+    "source": "Flannery O'Connor",
+    "core": "grotesques with one big trait; violence as grace; plain vernacular; ironic endings",
+    "shipped": false
+  },
+  {
+    "slug": "ogilvy-confessions",
+    "source": "Confessions of an Advertising Man 1963",
+    "core": "product is the hero; headline carries the ad; one big idea; research first",
+    "shipped": false
+  },
+  {
+    "slug": "ogilvy-how-to-write",
+    "source": "Ogilvy's 1982 memo",
+    "core": "write like you talk; short words/sentences/paragraphs; no jargon; never send day-written; \u22642 pages",
+    "shipped": false
+  },
+  {
+    "slug": "onboarding-sequence",
+    "source": "Campaign Monitor",
+    "core": "welcome \u2192 first win \u2192 education \u2192 engagement; 4-6 emails",
+    "shipped": false
+  },
+  {
+    "slug": "op-ed",
+    "source": "NYT guidelines",
+    "core": "hook; thesis early; evidence; acknowledge counterargument; memorable close; ~700 words",
+    "shipped": false
+  },
+  {
+    "slug": "orlean-quirky-immersion",
+    "source": "The Orchid Thief",
+    "core": "quirky immersive profiles; affectionate curiosity; obsession as plot",
+    "shipped": false
+  },
+  {
+    "slug": "orwell",
+    "source": "Politics and the English Language 1946",
+    "core": "no dead metaphors; short words; cut words; active voice; concrete over jargon",
+    "shipped": false
+  },
+  {
+    "slug": "oscola",
+    "source": "Oxford legal citation",
+    "core": "footnote citations; no full stops in abbreviations; italic case names",
+    "shipped": false
+  },
+  {
+    "slug": "packy-mccormick",
+    "source": "Not Boring",
+    "core": "brand as filter; find the momentum in plain sight; sponsor-powered essays",
+    "shipped": false
+  },
+  {
+    "slug": "palahniuk-transgressive",
+    "source": "Fight Club + 13 Techniques",
+    "core": "present tense; chunk paragraphs; earworm repetition; twist payoff",
+    "shipped": false
+  },
+  {
+    "slug": "paramedic-method",
+    "source": "Lanham, Revising Prose 1979",
+    "core": "circle prepositions and \"is\" verbs; who does what; simple active verb; start fast; read aloud",
+    "shipped": false
+  },
+  {
+    "slug": "parker-biting-wit",
+    "source": "Dorothy Parker",
+    "core": "cynical epigram closings; sting endings; quips as social compression",
+    "shipped": false
+  },
+  {
+    "slug": "perelman-wordplay-parody",
+    "source": "S.J. Perelman",
+    "core": "baroque pun chains; parody of high and low; absurd catalogues",
+    "shipped": false
+  },
+  {
+    "slug": "pink-sell-is-human",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "pinker-classic-style",
+    "source": "The Sense of Style 2014",
+    "core": "prose as window on the world; kill hedging; nouns/verbs over adjectives",
+    "shipped": false
+  },
+  {
+    "slug": "pixar-22",
+    "source": "Emma Coats 2011",
+    "core": "admire characters for trying; know the ending; simple focus; coincidences get you in, never out",
+    "shipped": false
+  },
+  {
+    "slug": "plain-english-movement",
+    "source": "Plain English Campaign (Maher 1979)",
+    "core": "short sentences; active verbs; Crystal Mark",
+    "shipped": false
+  },
+  {
+    "slug": "plain-language",
+    "source": "US Plain Writing Act + PLAIN",
+    "core": "front-load; \u226425-word sentences; passive \u226410%; Flesch \u226560; jargon ban",
+    "shipped": true
+  },
+  {
+    "slug": "plimpton-participatory",
+    "source": "Paper Lion",
+    "core": "author as amateur among pros; earnest self-mockery; insider detail as outsider",
+    "shipped": false
+  },
+  {
+    "slug": "poe-unity-of-effect",
+    "source": "Poe, Philosophy of Composition",
+    "core": "every sentence serves one dread emotion; incantatory rhythm; gothic stage",
+    "shipped": false
+  },
+  {
+    "slug": "polsky-rundown",
+    "source": "broadcast rundown practice",
+    "core": "order by priority not chronology; tease up, resolve down",
+    "shipped": false
+  },
+  {
+    "slug": "positioning-statement",
+    "source": "Moore, Crossing the Chasm",
+    "core": "for [target] who [need], [brand] is [category] that [benefit] because [reason]",
+    "shipped": false
+  },
+  {
+    "slug": "pratch-footnotes",
+    "source": "Terry Pratchett",
+    "core": "footnotes carrying jokes; comic simile exaggeration; genre parody with moral inversion",
+    "shipped": false
+  },
+  {
+    "slug": "pre-suasion",
+    "source": "Cialdini 2016",
+    "core": "prime the frame before the ask",
+    "shipped": false
+  },
+  {
+    "slug": "press-release",
+    "source": "AP convention",
+    "core": "headline, dateline, lede, boilerplate, contact, ###",
+    "shipped": false
+  },
+  {
+    "slug": "pressfield-war-of-art",
+    "source": "2002",
+    "core": "name the Resistance; turn pro; show up daily; structure beats mood",
+    "shipped": false
+  },
+  {
+    "slug": "prfaq",
+    "source": "Amazon working backwards",
+    "core": "external press release + 15-30 hard internal FAQ",
+    "shipped": false
+  },
+  {
+    "slug": "propp-morphology",
+    "source": "Propp 1928",
+    "core": "31 folktale functions; characters as roles (hero, villain, donor, helper)",
+    "shipped": false
+  },
+  {
+    "slug": "push-notification",
+    "source": "Braze",
+    "core": "<90 chars; action-oriented; why now",
+    "shipped": false
+  },
+  {
+    "slug": "pyramid-principle",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "ray-dalio",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "read-aloud-test",
+    "source": "craft hygiene",
+    "core": "read aloud; the ear catches what the eye misses",
+    "shipped": false
+  },
+  {
+    "slug": "remnick-reported-profile",
+    "source": "David Remnick",
+    "core": "exhaustive research; evenhanded; scene + context weave; no byline attitude",
+    "shipped": false
+  },
+  {
+    "slug": "rewrite-is-writing",
+    "source": "craft doctrine",
+    "core": "first draft = discovery; rewrite = the work; final pass is deletion",
+    "shipped": false
+  },
+  {
+    "slug": "rhetorical-question",
+    "source": "classical",
+    "core": "ask what you want the reader to answer; silence is the assertion",
+    "shipped": false
+  },
+  {
+    "slug": "rogers-rogerian",
+    "source": "Young, Becker & Pike 1970",
+    "core": "state opponent fairly; find common ground; propose solution",
+    "shipped": false
+  },
+  {
+    "slug": "rowling-immersive",
+    "source": "J.K. Rowling",
+    "core": "third-person limited; invented vocabulary; active declaratives; chapter hooks",
+    "shipped": false
+  },
+  {
+    "slug": "royko-chicago-vernacular",
+    "source": "Mike Royko",
+    "core": "Chicago vernacular; short punchy columns; corruption person-first",
+    "shipped": false
+  },
+  {
+    "slug": "runyon-broadway-vernacular",
+    "source": "Guys and Dolls",
+    "core": "present tense; Broadway slang; real people disguised",
+    "shipped": false
+  },
+  {
+    "slug": "ryan-holiday",
+    "source": "Obstacle Is the Way",
+    "core": "stoic inversion; one ancient idea per book; dense biography",
+    "shipped": false
+  },
+  {
+    "slug": "salinger-voice",
+    "source": "Catcher in the Rye",
+    "core": "first-person colloquial with interjections (\"and all\"); rambling direct address; 1940s slang",
+    "shipped": false
+  },
+  {
+    "slug": "sam-altman",
+    "source": "Startup Advice 2014",
+    "core": "write down what sucks \u2192 ideas; obsess over idea and market; zero fluff",
+    "shipped": false
+  },
+  {
+    "slug": "sandefur",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "saunders-corpo-absurd",
+    "source": "George Saunders",
+    "core": "corporate bureaucratic vernacular made strange; deadpan compassion; polyphonic voices",
+    "shipped": false
+  },
+  {
+    "slug": "save-the-cat",
+    "source": "Blake Snyder 2005",
+    "core": "15 beats from Opening Image to Finale; make the hero likable",
+    "shipped": false
+  },
+  {
+    "slug": "schwartz-breakthrough",
+    "source": "Eugene Schwartz 1966",
+    "core": "copy is assembled not written; sell the market's awareness stage",
+    "shipped": false
+  },
+  {
+    "slug": "scqa",
+    "source": "Minto",
+    "core": "Situation \u2192 Complication \u2192 Question \u2192 Answer",
+    "shipped": false
+  },
+  {
+    "slug": "seth-godin",
+    "source": "seths.blog",
+    "core": "short sentences; cut every word; classified-ad opening; ~275 words; idea then flip",
+    "shipped": false
+  },
+  {
+    "slug": "show-dont-tell",
+    "source": "Henry James doctrine",
+    "core": "action and detail carry what adjectives claim; objective correlative (Eliot)",
+    "shipped": false
+  },
+  {
+    "slug": "simon-sinek",
+    "source": "Start with Why 2009",
+    "core": "Why \u2192 How \u2192 What, inside out; people buy why",
+    "shipped": false
+  },
+  {
+    "slug": "slack-voice",
+    "source": "Slack brand",
+    "core": "\"you\" not \"we\"; clear over clever; adds value not noise",
+    "shipped": false
+  },
+  {
+    "slug": "smith-playful-omniscient",
+    "source": "Zadie Smith",
+    "core": "playful omniscient zoom; dialect comedy; tragicomic shifts",
+    "shipped": false
+  },
+  {
+    "slug": "smith-sports-literary",
+    "source": "Red Smith",
+    "core": "column raised to literature; no sports jargon; irony as default",
+    "shipped": false
+  },
+  {
+    "slug": "snowflake-method",
+    "source": "Randy Ingermanson",
+    "core": "10-step progressive expansion, sentence \u2192 scenes \u2192 draft",
+    "shipped": false
+  },
+  {
+    "slug": "sontag-aphoristic",
+    "source": "Against Interpretation",
+    "core": "\"X is not Y\" declarations; numbered argument lists; no hedging",
+    "shipped": false
+  },
+  {
+    "slug": "soap-note",
+    "source": "Lawrence Weed 1960s",
+    "core": "Subjective, Objective, Assessment, Plan",
+    "shipped": false
+  },
+  {
+    "slug": "sorkin-argument",
+    "source": "Aaron Sorkin",
+    "core": "every scene an argument with intention/obstacle; end on the turn",
+    "shipped": false
+  },
+  {
+    "slug": "spark-backwards-wit",
+    "source": "Muriel Spark",
+    "core": "plot built backwards from announced ending; dry acid wit; foreshadowing as device",
+    "shipped": false
+  },
+  {
+    "slug": "spillane",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "spoin/SPIN",
+    "source": "Neil Rackham 1988",
+    "core": "Situation, Problem, Implication, Need-payoff",
+    "shipped": false
+  },
+  {
+    "slug": "star",
+    "source": "Tom Janz",
+    "core": "Situation, Task, Action, Result",
+    "shipped": false
+  },
+  {
+    "slug": "ste-100",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "steinbeck-plain-parable",
+    "source": "Grapes of Wrath",
+    "core": "plain Anglo-Saxon diction; intercalary parable chapters; biblical repetition",
+    "shipped": false
+  },
+  {
+    "slug": "stein-rose",
+    "source": "Gertrude Stein",
+    "core": "nouns are things; repetition and continuous present; sound before meaning",
+    "shipped": false
+  },
+  {
+    "slug": "story-spine",
+    "source": "Kenn Adams",
+    "core": "Once upon a time\u2026 Every day\u2026 Until one day\u2026 Because of that\u2026 Until finally\u2026",
+    "shipped": false
+  },
+  {
+    "slug": "strunk-white",
+    "source": "Elements of Style 1918/1959",
+    "core": "omit needless words; positive form; concrete language; end on emphatic word",
+    "shipped": false
+  },
+  {
+    "slug": "stripe-style",
+    "source": "Stripe Style Guide",
+    "core": "second person; clear over clever; plain terms",
+    "shipped": false
+  },
+  {
+    "slug": "subtext-principle",
+    "source": "Hemingway/Chekhov",
+    "core": "text vs subtext; conflict under the dialogue; good dialogue is what's not said",
+    "shipped": false
+  },
+  {
+    "slug": "sugarman-adweek",
+    "source": "Adweek Copywriting Handbook 2006",
+    "core": "psychological triggers; curiosity gap; involvement; the you-factor",
+    "shipped": false
+  },
+  {
+    "slug": "talese-immersion",
+    "source": "Gay Talese",
+    "core": "months with subjects; scene reconstruction; narrator invisible; exhaustive significant detail",
+    "shipped": false
+  },
+  {
+    "slug": "ted-commandments",
+    "source": "TED.org",
+    "core": "no usual shtick; tell stories; no selling; max 18 min; no jargon",
+    "shipped": false
+  },
+  {
+    "slug": "telegraph-style",
+    "source": "The Telegraph",
+    "core": "-ise spellings; no US spellings; no full stops in abbreviations",
+    "shipped": false
+  },
+  {
+    "slug": "thompson",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "three-act",
+    "source": "Syd Field 1979",
+    "core": "setup \u2192 confrontation \u2192 resolution",
+    "shipped": false
+  },
+  {
+    "slug": "thurber-comic-deflation",
+    "source": "Walter Mitty",
+    "core": "deflate the heroic; understatement as humor; domestic wars in plain prose",
+    "shipped": false
+  },
+  {
+    "slug": "toulmin",
+    "source": "Uses of Argument 1958",
+    "core": "claim, data, warrant, backing, qualifier, rebuttal",
+    "shipped": false
+  },
+  {
+    "slug": "tricolon",
+    "source": "classical",
+    "core": "three parallel items by rising weight; the third lands hardest",
+    "shipped": false
+  },
+  {
+    "slug": "trillin-deadpan-food-humor",
+    "source": "Calvin Trillin",
+    "core": "deadpan food/politics humor; plain declaratives; comic obsessions",
+    "shipped": false
+  },
+  {
+    "slug": "truss-eats-shoots",
+    "source": "Lynne Truss 2003",
+    "core": "punctuation is courtesy; the comma is the reader's breathing; it's/its discipline",
+    "shipped": false
+  },
+  {
+    "slug": "tweet-thread",
+    "source": "Semrush practice",
+    "core": "hook tweet; numbered self-contained points; proof; CTA",
+    "shipped": false
+  },
+  {
+    "slug": "twain-vernacular-humor",
+    "source": "Huckleberry Finn",
+    "core": "first-person colloquial; phonetic dialect; deadpan understatement; episodic",
+    "shipped": false
+  },
+  {
+    "slug": "tynan-showman-criticism",
+    "source": "Kenneth Tynan",
+    "core": "witty provocative verdicts; high-low culture range; controversy as style",
+    "shipped": false
+  },
+  {
+    "slug": "un-editorial-manual",
+    "source": "UN",
+    "core": "full name first; day-month-year dates; gender-inclusive drafting",
+    "shipped": false
+  },
+  {
+    "slug": "updike-sensory-maximalist",
+    "source": "Updike",
+    "core": "every object earns essay-worthy metaphor; precise apt metaphors; domestic micro-observation",
+    "shipped": false
+  },
+  {
+    "slug": "usa-today-network",
+    "source": "USA TODAY style (2025)",
+    "core": "network-wide digital-first conventions; unified spelling/capitalization",
+    "shipped": false
+  },
+  {
+    "slug": "us-agency-styles",
+    "source": "Digital.gov registry (CBO, HHS, CDC, NIH, NCBI, EIA, USDA, DOE, BIA, NIJ, VA, FTC, GSA, NARA, SBA, SSA, USPS)",
+    "core": "agency-specific publication conventions, GPO-aligned",
+    "shipped": false
+  },
+  {
+    "slug": "usp",
+    "source": "Rosser Reeves 1961",
+    "core": "the unique benefit competitors can't/don't offer, strong enough to move masses",
+    "shipped": false
+  },
+  {
+    "slug": "ux-microcopy",
+    "source": "NN/g",
+    "core": "context, clarity, action-oriented, user-centered",
+    "shipped": false
+  },
+  {
+    "slug": "v2mom",
+    "source": "Marc Benioff",
+    "core": "Vision, Values, Methods, Obstacles, Measures; one page, cascaded, yearly",
+    "shipped": false
+  },
+  {
+    "slug": "vidal-patrician-aphorism",
+    "source": "Gore Vidal",
+    "core": "patrician wit; essay as takedown; magisterial \"we\"",
+    "shipped": false
+  },
+  {
+    "slug": "violet-rule",
+    "source": "James Wood",
+    "core": "one exact strange detail that could only be true of this character",
+    "shipped": false
+  },
+  {
+    "slug": "vogler",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "vonnegut-8-rules",
+    "source": "Bagombo Snuff Box / A Man Without a Country",
+    "core": "don't waste the stranger's time; character wants something; start near the end; be a sadist",
+    "shipped": false
+  },
+  {
+    "slug": "vonnegut-shapes",
+    "source": "Vonnegut 1965 lecture",
+    "core": "man in hole, boy meets girl, Cinderella, Kafkaesque arcs",
+    "shipped": false
+  },
+  {
+    "slug": "vitalik-buterin",
+    "source": "vitalik.ca",
+    "core": "principled technical-ethical essays; nuance over simplification; d/acc frames",
+    "shipped": false
+  },
+  {
+    "slug": "wallace-maximalist",
+    "source": "DFW",
+    "core": "footnotes as counterpoint; qualification chains; jargon + vernacular collision",
+    "shipped": false
+  },
+  {
+    "slug": "waugh-deadpan-irony",
+    "source": "Evelyn Waugh",
+    "core": "lucid economical prose; understatement of catastrophe; comedy of manners",
+    "shipped": false
+  },
+  {
+    "slug": "w3c-manual",
+    "source": "W3C",
+    "core": "\"The Web\" as proper noun; spell out acronyms; consistent terminology",
+    "shipped": false
+  },
+  {
+    "slug": "weiland-arc",
+    "source": "K.M. Weiland 2013",
+    "core": "the lie the character believes vs the truth; mirror moment",
+    "shipped": false
+  },
+  {
+    "slug": "welty-place",
+    "source": "Eudora Welty",
+    "core": "place is the source of voice; anchor scenes in geography; felt experience first",
+    "shipped": false
+  },
+  {
+    "slug": "white-warm-clarity",
+    "source": "E.B. White",
+    "core": "plain Anglo-Saxon clarity; short warm humorous sentences; concrete imagery",
+    "shipped": false
+  },
+  {
+    "slug": "who-style",
+    "source": "WHO style guide",
+    "core": "-ise spelling; \"WHO\" after first mention; consistent health terminology",
+    "shipped": false
+  },
+  {
+    "slug": "wikipedia-mos",
+    "source": "Wikipedia Manual of Style",
+    "core": "sentence-case titles; consistent national variety per article",
+    "shipped": false
+  },
+  {
+    "slug": "wilde-epigram",
+    "source": "Oscar Wilde",
+    "core": "paradox-with-reversal epigrams; aphoristic maxims; wit-duel dialogue",
+    "shipped": false
+  },
+  {
+    "slug": "williams-clarity-grace",
+    "source": "Joseph Williams, Style",
+    "core": "characters as subjects; actions as verbs; kill nominalizations; given-new flow",
+    "shipped": false
+  },
+  {
+    "slug": "wodehouse-comic-simile",
+    "source": "Wodehouse, Jeeves",
+    "core": "comic simile chains; Edwardian slang; farce machinery; metonymy as personification",
+    "shipped": false
+  },
+  {
+    "slug": "wolfe-status-life",
+    "source": "Tom Wolfe",
+    "core": "status-detail inventory (cars, decor, neighborhoods); interior monologue; all-caps/italics/exclamations",
+    "shipped": false
+  },
+  {
+    "slug": "woolf-interiority",
+    "source": "Virginia Woolf",
+    "core": "interior monologue not plot; lyrical simile chains; consciousness flows between characters",
+    "shipped": false
+  },
+  {
+    "slug": "writers-diet",
+    "source": "Helen Sword 2012",
+    "core": "flab categories (be-verbs, zombie nouns, prepositions, adverbs, it-this-that); lean sentence metrics",
+    "shipped": false
+  },
+  {
+    "slug": "yoda",
+    "source": "voice tier",
+    "core": "inverted object-subject-verb syntax; wisdom as playful inversion",
+    "shipped": true
+  },
+  {
+    "slug": "you-attitude",
+    "source": "business comms",
+    "core": "frame from reader's interest; positive phrasing",
+    "shipped": false
+  },
+  {
+    "slug": "zapico-firstline",
+    "source": "",
+    "core": "",
+    "shipped": false
+  },
+  {
+    "slug": "zinsser-on-writing-well",
+    "source": "William Zinsser, On Writing Well 1976",
+    "core": "clutter is the disease; strip sentences to cleanest components; warmth and humanity; one idea per paragraph",
+    "shipped": false
+  },
+  {
+    "slug": "zen-motorcycles",
+    "source": "Pirsig 1974",
+    "core": "quality is an event; thesis-ANTIthesis-synthesis; understand before you write",
+    "shipped": false
+  },
+  {
+    "slug": "asd-ste100",
+    "source": "ASD-STE100 Simplified Technical English",
+    "core": "controlled vocabulary; one instruction per sentence; no idioms; unambiguous technical prose",
+    "shipped": true
+  },
+  {
+    "slug": "bob-ross",
+    "source": "Bob Ross, The Joy of Painting",
+    "core": "calm soothing instruction; mistakes reframed as opportunities; gentle step-by-step",
+    "shipped": true
+  },
+  {
+    "slug": "jack-sparrow",
+    "source": "Captain Jack Sparrow, Pirates of the Caribbean",
+    "core": "flamboyant baroque-pirate prose; mischievous grandiosity; entertainingly evasive",
+    "shipped": true
+  },
+  {
+    "slug": "paddington",
+    "source": "Paddington Bear",
+    "core": "exceedingly polite earnest kindness; careful courtesy; gentle formality; mishaps recounted calmly",
+    "shipped": true
+  },
+  {
+    "slug": "shrek",
+    "source": "Shrek",
+    "core": "deadpan dry grumpy-but-warm; blunt honesty with humor; swamp-earth analogies; kindness behind gruff",
+    "shipped": true
+  },
+  {
+    "slug": "ted-lasso",
+    "source": "Ted Lasso",
+    "core": "warm high-EQ folksy optimism; encouragement; constructive reframing; never cynical",
+    "shipped": true
+  },
+  {
+    "slug": "winnie-the-pooh",
+    "source": "Winnie the Pooh, A.A. Milne",
+    "core": "gentle unhurried childlike wisdom; small plain words; kindness with a bear's patience",
+    "shipped": true
+  }
+]
