@@ -23,6 +23,12 @@ writing-skills-mcp = "writing_skills_mcp.server:main"
 [tool.hatch.build.targets.wheel]
 packages = ["src/writing_skills_mcp"]
 
+[tool.hatch.build.targets.sdist]
+[tool.hatch.build.targets.sdist.force-include]
+"plugin.json" = "plugin.json"
+"skills" = "skills"
+"exhaustive-styles.json" = "exhaustive-styles.json"
+
 [tool.hatch.build.targets.wheel.force-include]
 "plugin.json" = "plugin.json"
 "skills" = "skills"
