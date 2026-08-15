@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.3 (2026-08-15)
+
+- **Added** Cloudflare relay worker (`workers/install-telemetry/`, SUR-88
+  pattern): `/e` ingests events, caps per distinct_id/IP, stamps CF edge
+  props (`$ip`, `cf_asn`, `cf_as_organization`, `cf_colo`,
+  `cf_verified_bot`, `cf_bot_score`, `cf_edge_country` — no `$geoip_*`),
+  forwards to PostHog. Root: `writing-skills.builditwithai.xyz` (SUR-267
+  Phase 2 "Worker relay").
+- **Enabled** telemetry by default: client now POSTs to the relay gateway
+  (env `WRITING_SKILLS_TELEMETRY_URL` overrides); opt-out unchanged
+  (`WRITING_SKILLS_TELEMETRY=false`, `DO_NOT_TRACK`, `NO_TELEMETRY`).
+- **Added** product User-Agent (`writing-skills-mcp/<version>`) so the
+  client passes the relay's default-library-UA rejection, and
+  `$process_person_profile: false` (no PostHog person profiles).
+- **Fixed** `__version__` drift: `writing_skills_mcp/__init__.py` was still
+  `0.3.0` while manifests were at 0.3.2; now in sync with all manifests.
+
 ## 0.3.2 (2026-08-15)
 
 - **Added** `mcpServers` to `.claude-plugin/plugin.json` — installing the
