@@ -73,6 +73,7 @@ def agent_name() -> str | None:
 def _enrich(props: dict) -> dict:
     agent = agent_name()
     out = {
+        "mcp_server_name": "writing-skills-mcp",
         "actor_type": "ai_agent" if agent else "unknown",
         "agent_name": agent or "unknown",
         "discovery_channel": os.environ.get("WRITING_SKILLS_SOURCE", "unknown"),

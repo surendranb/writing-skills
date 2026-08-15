@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.4 (2026-08-15)
+
+- **Added** `mcp_server_name: "writing-skills-mcp"` to every event (SUR-42
+  pattern) so writing-skills events are distinguishable in the shared
+  PostHog project.
+
 ## 0.3.3 (2026-08-15)
 
 - **Added** Cloudflare relay worker (`workers/install-telemetry/`, SUR-88

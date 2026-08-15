@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "writing-skills"
-version = "0.3.3"
+version = "0.3.4"
 description = "Procedural writing-style skills for AI agents — official frameworks, not vibes."
 readme = "README.md"
 license = { text = "MIT" }

@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Procedural writing-style skills for AI agents — official frameworks, not vibes.",
-    "version": "0.3.3"
+    "version": "0.3.4"
   },
   "plugins": [
     {
