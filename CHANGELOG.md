@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1 (2026-08-15)
+
+- **Fixed** bundled-catalog fallback on installed wheels: `BUNDLE_ROOT` probing
+  now walks both parents (editable-checkout and nested site-packages layouts).
+  v0.3.0's fallback only worked from a repo checkout — `uvx` installs broke
+  offline discovery.
+
 ## 0.3.0 (2026-08-15)
 
 MCP skill registry: unlimited skills, live from GitHub, no re-installs.

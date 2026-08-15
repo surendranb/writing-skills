@@ -100,6 +100,24 @@ class FakeCatalog(unittest.TestCase):
         out = server.get_skill("plain-language")
         self.assertTrue(out["shipped"])
 
+    def test_bundle_root_probe_nested_layout(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            site_packages = root / "lib" / "python3.12" / "site-packages"
+            site_packages.mkdir(parents=True)
+            (site_packages / "exhaustive-styles.json").write_text("[]")
+            pkg_file = site_packages / "writing_skills_mcp" / "server.py"
+            self.assertEqual(server._find_bundle_root(pkg_file), site_packages)
+
+    def test_bundle_root_probe_editable_layout(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            pkg = root / "src" / "writing_skills_mcp"
+            pkg.mkdir(parents=True)
+            (root / "exhaustive-styles.json").write_text("[]")
+            pkg_file = pkg / "server.py"
+            self.assertEqual(server._find_bundle_root(pkg_file), root)
+
 
 @unittest.skipUnless(
     os.environ.get("WRITING_SKILLS_LIVE") == "1",

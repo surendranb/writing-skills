@@ -25,7 +25,16 @@ GITHUB_RAW = "https://raw.githubusercontent.com/surendranb/writing-skills/main"
 CATALOG_URL = f"{GITHUB_RAW}/exhaustive-styles.json"
 SKILL_URL = f"{GITHUB_RAW}/skills/{{slug}}/SKILL.md"
 CACHE_TTL = 600.0
-BUNDLE_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _find_bundle_root(pkg_file: Path) -> Path:
+    for root in (pkg_file.parents[2], pkg_file.parents[1]):
+        if (root / "exhaustive-styles.json").is_file():
+            return root
+    return pkg_file.parents[2]
+
+
+BUNDLE_ROOT = _find_bundle_root(Path(__file__).resolve())
 VALID_SLUG = re.compile(r"^[a-z0-9][a-z0-9-]*$")
 
 _cache: dict[str, tuple[float, str]] = {}
