@@ -129,7 +129,7 @@ function json(obj, status = 200) {
 
 async function sendPostHogEvent(env, payload) {
   try {
-    const res = await fetch(`${env.POSTHOG_HOST}/capture/`, {
+    await fetch(`${env.POSTHOG_HOST}/capture/`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
@@ -140,8 +140,7 @@ async function sendPostHogEvent(env, payload) {
         timestamp: new Date().toISOString(),
       }),
     });
-    console.log(`posthog forward ${payload.event}: ${res.status} ${(await res.text()).slice(0, 120)}`);
   } catch (err) {
-    console.log(`posthog forward failed: ${err.message}`);
+    // Fail silently — telemetry never blocks the caller.
   }
 }
