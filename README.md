@@ -59,6 +59,22 @@ Every skill ends with a `Verify` checklist the agent must pass before it deliver
 
 `ted-lasso` · `jack-sparrow` · `shrek` · `yoda` · `winnie-the-pooh` · `paddington` · `bob-ross`
 
+## MCP server — unlimited skills, live from GitHub
+
+```bash
+uvx writing-skills-mcp
+```
+
+The plugin ships 14 skills statically. The MCP server is the living registry
+on top: it discovers styles from the full catalog on GitHub (`search_styles`),
+returns any skill's full `SKILL.md` (`get_skill`), and installs it into a
+harness skills directory (`install_skill`). A new skill is just a commit —
+no package update, no re-install, at any scale.
+
+```bash
+uvx --from writing-skills writing-skills-mcp
+```
+
 ## Contribute
 
 Copy [template/SKILL.md](template/SKILL.md), fill it, run

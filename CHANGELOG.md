@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.3.0 (2026-08-15)
+
+MCP skill registry: unlimited skills, live from GitHub, no re-installs.
+
+- **Added** `writing-skills-mcp` server (`uvx writing-skills-mcp`): tools
+  `search_styles` (ranked match over the full catalog),
+  `get_skill` (full SKILL.md for shipped skills; catalog-only styles flagged),
+  `install_skill` (downloads + writes into a harness skills dir).
+- **Added** GitHub-backed discovery: index and skills fetched live from
+  `main` — adding a skill is one commit, no package update ever needed for
+  users. Bundled package data is the offline fallback.
+- **Added** anonymous telemetry client (SUR-86 pattern): `server_first_install` /
+  `mcp_started` / `tool_executed`, install id in `~/.writing-skills/`, envoy
+  opt-out (`WRITING_SKILLS_TELEMETRY=false`, `DO_NOT_TRACK`), zero PII; only
+  active when `WRITING_SKILLS_TELEMETRY_URL` is set. Worker relay + PostHog
+  wiring lands next.
+- **Added** CI check: `exhaustive-styles.json` shipped flags must match
+  `skills/` folders (the discovery index never goes stale).
+- **Changed** PyPI package becomes real: console script, `mcp` dependency,
+  catalog ships in both npm and PyPI artifacts.
+
 ## 0.2.0 (2026-08-14)
 
 World-class pass: discovery, correctness, and contribution infrastructure.

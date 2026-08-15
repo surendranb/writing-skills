@@ -95,6 +95,17 @@ actual = {d.name for d in skill_dirs}
 if listed and listed != actual:
     err(f"marketplace.json skills out of sync: missing {actual - listed}, stale {listed - actual}")
 
+catalog_path = ROOT / "exhaustive-styles.json"
+if catalog_path.exists():
+    try:
+        catalog = json.loads(catalog_path.read_text())
+        shipped = {e["slug"] for e in catalog if isinstance(e, dict) and e.get("shipped")}
+        if shipped != actual:
+            err(f"exhaustive-styles.json shipped out of sync: "
+                f"missing {actual - shipped}, stale {shipped - actual}")
+    except json.JSONDecodeError:
+        err("exhaustive-styles.json does not parse")
+
 if errors:
     print(f"FAIL — {len(errors)} problem(s):")
     for e in errors:
