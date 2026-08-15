@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.2 (2026-08-15)
+
+- **Added** `mcpServers` to `.claude-plugin/plugin.json` — installing the
+  plugin now auto-wires the `writing-skills-mcp` server (via `uvx`) in
+  Claude Code; no separate MCP config step.
+- **Added** `mcp.json` (Agent Plugins 1.0 schema) at plugin root for
+  Codex/Kiro/Cursor-class clients.
+- **Added** `.claude-plugin/` + `mcp.json` to the npm package files (npm
+  consumers previously got the Codex manifest only, never the Claude one).
+
 ## 0.3.1 (2026-08-15)
 
 - **Fixed** bundled-catalog fallback on installed wheels: `BUNDLE_ROOT` probing

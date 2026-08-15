@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "writing-skills",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Procedural writing-style skills for agents \u2014 measurable standards, voice craft, and character voices as SKILL.md instructions.",
   "author": "Surendran",
   "homepage": "https://github.com/surendranb/writing-skills",
