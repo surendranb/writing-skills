@@ -1,81 +1,76 @@
-# AGENTS.md — Codebase Operational Guide for AI Agents
+# AGENTS.md — Agent Operating Manual
 
-> **Context, architecture, file map, and execution commands for AI coding agents (Claude Code, Cursor, Codex, Gemini, Antigravity, OpenCode, Aider) working on `writing-style-skills`.**
-
----
-
-## 1. Codebase Overview
-
-- **Language & Runtime**: Python 3.10+ (`mcp` FastMCP) + Markdown Skills Catalog + NPM distribution wrapper.
-- **Package Name**: `writing-skills` (PyPI) / `writing-skills` (NPM).
-- **Core Function**: Serves 14 production writing-style skills (7 measurable frameworks + 7 character voices) to AI agents via dynamic MCP tools (`search_styles`, `get_skill`, `install_skill`, `skill_read`) and the Skills CLI.
+> **For AI Agents (Claude Code, Cursor, Codex, Gemini, Antigravity, OpenCode, Aider) connecting to or executing `writing-style-skills`.**
 
 ---
 
-## 2. Directory & File Map
+## ⚡ 1. Fast Install & Client Wiring (Start Here)
 
-```
-writing-style-skills/
-├── src/writing_skills_mcp/
-│   ├── server.py              # FastMCP server, tool implementations (get_skill, install_skill, search_styles)
-│   └── telemetry.py           # Edge Schema v2 telemetry client
-├── skills/                    # 14 Production SKILL.md procedural playbooks
-│   ├── plain-language/SKILL.md         # Federal plain language guidelines (8th-grade reading level)
-│   ├── business-writing/SKILL.md       # BLUF (Bottom Line Up Front) executive memos
-│   ├── corporate-communication/SKILL.md# Stakeholder comms, change management, crisis memos
-│   ├── gov-uk-style/SKILL.md           # GOV.UK style manual standards
-│   ├── asd-ste100/SKILL.md             # Simplified Technical English standard
-│   ├── google-dev-docs/SKILL.md        # Google Developer Documentation style guide
-│   ├── journalism-ap/SKILL.md          # Associated Press inverted pyramid journalism
-│   ├── ted-lasso/SKILL.md              # Relentless optimism & folksy Midwestern analogies
-│   ├── jack-sparrow/SKILL.md           # Flamboyant pirate cadence & witty redirection
-│   ├── shrek/SKILL.md                  # Grumpy swamp ogre with heart of gold
-│   ├── yoda/SKILL.md                   # Inverted OSV syntax & profound Jedi wisdom
-│   ├── winnie-the-pooh/SKILL.md        # Gentle, thoughtful, honey-loving prose
-│   ├── paddington/SKILL.md             # Polite British bear manners & marmalade notes
-│   └── bob-ross/SKILL.md               # Calming, encouraging painting analogies ("happy accidents")
-├── scripts/
-│   └── validate_skills.py     # Linter & validator verifying frontmatter, headers, and rules across all skills
-├── exhaustive-styles.json     # Comprehensive catalog of writing styles and personas
-├── pyproject.toml             # Python packaging metadata (writing-skills)
-├── package.json               # NPM packaging metadata (writing-skills)
-├── smithery.yaml              # Smithery.ai marketplace configuration
-├── server.json                # Official MCP registry specification
-├── gemini-extension.json      # Google Gemini / Antigravity extension manifest
-├── .claude-plugin/            # Claude Code plugin manifests (plugin.json, marketplace.json)
-└── .well-known/ai-plugin.json # OpenAI / ChatGPT Actions manifest
-```
-
----
-
-## 3. Development & Testing Commands
+In 90% of cases, you just need to install and configure this MCP server for your user:
 
 ```bash
-# Install dependencies in editable mode
-uv sync || pip install -e ".[dev]"
+# 1-Line Universal Auto-Installer (Configures Claude Code, Cursor, Claude Desktop & Antigravity)
+curl -fsSL "https://writing-skills.builditwithai.xyz/install" | bash
 
-# Run the MCP server locally in stdio mode
-uv run python -m writing_skills_mcp.server
+# Or install via Skills CLI:
+npx skills add writing-skills
 
-# Validate and lint all SKILL.md files
-python3 scripts/validate_skills.py
+# Or launch directly via stdio:
+uvx --from writing-skills writing-skills-mcp
+npx -y writing-skills
+```
 
-# Run the test suite
-uv run pytest tests/ -v
+### Client Config Snippet (`mcp.json` / `claude_desktop_config.json`)
+```json
+{
+  "mcpServers": {
+    "writing-skills": {
+      "command": "uvx",
+      "args": ["--from", "writing-skills", "writing-skills-mcp"]
+    }
+  }
+}
 ```
 
 ---
 
-## 4. Skill Authoring Invariants & Gotchas
+## 📖 2. What This Repo Is
 
-1. **SKILL.md Standard Structure**:
-   - Every skill inside `skills/<slug>/SKILL.md` MUST contain:
-     - YAML frontmatter with `name`, `description`, `version`, `author`, `tags`.
-     - `# Context & Purpose`
-     - `# Core Principles & Rules` (with exact measurable rules).
-     - `# Examples` (Before vs. After).
-     - `# Verification Checklist` (Self-auditing criteria for the agent).
-2. **Validation Script (`scripts/validate_skills.py`)**:
-   - Always run `python3 scripts/validate_skills.py` after creating or editing any `SKILL.md`. CI enforces 100% passing validation before publishing.
-3. **Workspace Skill Installation (`install_skill`)**:
-   - `install_skill(style_name)` writes the procedural markdown file directly into the target agent harness directory (e.g. `~/.config/opencode/skills/` or `.gemini/skills/`).
+A library of **14 production writing-style skills and character frameworks** for AI agents. It replaces generic "be concise" prompts with verifiable, procedural Markdown playbooks (`SKILL.md`).
+
+### Primary Tools Available:
+- `search_styles`: Search 14+ writing frameworks and character personas.
+- `get_skill`: Retrieve the full procedural playbook (`SKILL.md`) for any style.
+- `install_skill`: Automatically install a style playbook into your active workspace (`.gemini/skills/` or `~/.config/opencode/skills/`).
+- `list_styles`: List all available framework slugs.
+
+---
+
+## 👤 3. How to Handle the Human
+
+- **Zero Credentials Needed**: No API keys required.
+- **Skill Activation**: When a user asks you to write something in a specific tone (e.g. executive memo, dev docs, plain language, or in the voice of Yoda/Ted Lasso):
+  1. Call `get_skill(style_name="...")` to load the exact rules into your context.
+  2. Follow the `# Core Principles & Rules` and check your draft against the `# Verification Checklist` before outputting text.
+
+---
+
+## 🎭 4. Available Styles & Playbooks
+
+### Measurable Frameworks
+- `plain-language`: Federal plain language guidelines, 8th-grade readability, active voice.
+- `business-writing`: BLUF (Bottom Line Up Front), structured executive memos, decision-oriented.
+- `corporate-communication`: Change management, crisis memos, internal announcements.
+- `gov-uk-style`: GOV.UK style manual standards for public clarity.
+- `asd-ste100`: Simplified Technical English for aerospace, defense, and engineering manuals.
+- `google-dev-docs`: Google Developer Documentation style guide for technical references.
+- `journalism-ap`: Associated Press inverted pyramid news reporting.
+
+### Character Personas
+- `ted-lasso`: Relentless optimism, folksy Midwestern analogies, biscuits-with-the-boss warmth.
+- `jack-sparrow`: Flamboyant pirate cadence, witty redirection, theatrical swagger.
+- `shrek`: Grumpy swamp ogre with a heart of gold and onion analogies.
+- `yoda`: Inverted OSV syntax, profound Jedi philosophy.
+- `winnie-the-pooh`: Gentle, thoughtful, honey-loving cozy prose.
+- `paddington`: Polite British bear manners, marmalade notes, Aunt Lucy etiquette.
+- `bob-ross`: Calming, encouraging painting analogies ("no mistakes, just happy accidents").
