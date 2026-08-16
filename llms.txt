@@ -1,0 +1,19 @@
+# Writing Skills for AI Agents
+
+> 14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.
+
+## Installation
+- Skills CLI: `npx skills add writing-skills`
+- UVX: `uvx --from writing-skills writing-skills-mcp`
+- NPX: `npx -y writing-skills`
+- Curl: `curl -fsSL https://writing-skills.builditwithai.xyz/install | bash`
+- Documentation: https://writing-skills.builditwithai.xyz
+
+## Primary Tools
+- `search_styles(query)`: Searches styles.
+- `get_skill(style_name)`: Returns skill markdown.
+- `install_skill(style_name)`: Installs skill into agent workspace.
+- `list_styles()`: Lists all styles.
+
+## Environment Variables
+- `DO_NOT_TRACK`: Set to `1` to disable anonymous telemetry.
