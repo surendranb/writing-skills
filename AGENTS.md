@@ -1,57 +1,77 @@
-# AGENTS.md — writing-skills
+# AGENTS.md — Agent Operational Manual
 
-Repo map and contracts for agents working in this repository.
+> **Canonical context and operating procedures for AI agents (Claude Code, Cursor, Codex, Gemini, Antigravity, OpenCode, Aider) operating on or integrating `writing-style-skills`.**
 
-## What this is
+---
 
-14 writing-style skills as `SKILL.md` files: 7 **frameworks** (measurable standards
-with hard checks) and 7 **voices** (character registers with mechanical rules).
-Pure text — no code ships in the packages. The skills work in any harness that
-reads SKILL.md.
+## 1. System Identity & Mission
 
-## Layout
+- **Repository**: `surendranb/writing-skills`
+- **Package Name**: `writing-skills` (PyPI) / `writing-skills` (NPM)
+- **Live Portal**: [https://writing-skills.builditwithai.xyz](https://writing-skills.builditwithai.xyz)
+- **Purpose**: 14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.
 
+---
+
+## 2. Quickstart & Invocation for Agents
+
+Agents integrating or executing this server should use stdio transport via either runtime:
+
+```bash
+# Python runtime (FastMCP / stdio)
+uvx --from writing-skills writing-skills-mcp
+
+# Universal 1-line auto-installer
+curl -fsSL "https://writing-skills.builditwithai.xyz/install" | bash
 ```
-skills/<name>/SKILL.md      one skill per folder; frontmatter name == folder name
-.claude-plugin/             Claude Code marketplace + plugin manifests
-plugin.json                 Agent Plugins 1.0 manifest (Codex, Kiro, ...)
-package.json / pyproject.toml   npm / PyPI packaging (files: plugin.json + skills/)
-template/SKILL.md           skeleton for new skills
-scripts/validate_skills.py  the CI gate — run it before any commit
+
+### Environment Variables
+- None required (Zero configuration needed).
+
+
+---
+
+## 3. Tool Reference & Capabilities
+
+| Tool | Capability Summary |
+|---|---|
+| `search_styles` | Searches 14+ writing frameworks and character personas. |
+| `get_skill` | Retrieves the full procedural markdown playbook (SKILL.md). |
+| `install_skill` | Installs style playbook into agent active workspace. |
+| `list_styles` | Lists all available styles and frameworks. |
+| `skill_read` | Loads style playbooks dynamically from GitHub. |
+| `skills_list` | Lists all available skills. |
+
+---
+
+## 4. Agent Working Laws (Operational Rules)
+
+When contributing code, diagnosing bugs, or modifying this repository, all visiting agents must adhere strictly to these rules:
+
+1. **Truth Over Guessing**: Never fabricate responses, schema types, or error reasons. Run native verification scripts before asserting completion.
+2. **Shortest Working Diff (Lazy Senior Dev)**: Do not introduce unrequested abstractions, extra dependencies, or architectural bloat. Standard library and native platform features first.
+3. **Preserve Schema Stability**: Never remove or rename existing MCP tool parameters without strict backwards-compatibility layers.
+4. **Strict Telemetry Boundaries**: Diagnostic telemetry is non-PII and strictly opt-out. Never log user queries, credentials, file contents, or environment variables. Honor `DO_NOT_TRACK=1` and `MCP_TELEMETRY_OPT_OUT=1`.
+5. **No Direct Main Commits**: Always create a feature or fix branch before modifying code.
+
+---
+
+## 5. Verification & Test Protocol
+
+Before marking any task as complete in this repository, run the test suite:
+
+```bash
+# Run automated verification suite
+uv run pytest -v || python3 -m unittest
 ```
 
-## The skill anatomy contract (enforced by CI)
+---
 
-Every SKILL.md must have:
+## 6. Plugin & Marketplace Discovery Pointers
 
-1. Frontmatter: `name` matching the folder; `description` >= 80 chars containing
-   "Use when" with concrete trigger phrases.
-2. `## The core rule` — one bolded sentence that IS the skill, plus a workflow line.
-3. `## Mechanics` — numbered, each one verifiable (a cap, a ban list, a ratio —
-   never a vibe).
-4. `## Verify` — the checklist an agent must pass before delivering.
-5. `## Do not` — the anti-patterns.
-6. At least two `**Before:**/**After:**` (or `**Neutral:**/**Voice:**`) transforms.
-7. Total length <= 120 lines. Skills load into context; economy is a feature.
-
-## Working here
-
-- Validate after any change: `python3 scripts/validate_skills.py`
-- New skill: copy `template/SKILL.md` into `skills/<name>/`, fill it, add the
-  path to `.claude-plugin/marketplace.json`, validate.
-- Framework skills must cite the real standard (AP Stylebook, GOV.UK style guide,
-  ASD-STE100, Plain Writing Act) — verify rules against the source, not memory.
-  Fidelity errors are bugs.
-- Voice skills: mechanics must prevent caricature (rate-limit the tics — see
-  yoda's "every 3rd sentence" or jack-sparrow's "savvy? once, max").
-
-## Releases
-
-Every skill addition or plugin improvement = a release:
-
-1. Bump the version in **all** of: `plugin.json`, `.claude-plugin/plugin.json`,
-   `.claude-plugin/marketplace.json` (metadata.version), `package.json`,
-   `pyproject.toml` (CI fails on mismatch).
-2. Add a CHANGELOG.md entry.
-3. Tag `vX.Y.Z` + GitHub release → PyPI publishes via trusted publishing
-   (release.yml). npm: `npm publish` (manual).
+- **Claude Code**: `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`
+- **Gemini CLI / Antigravity**: `gemini-extension.json`
+- **Smithery.ai**: `smithery.yaml`
+- **Official MCP Registry & Glama**: `server.json`
+- **OpenAI / ChatGPT Actions**: `.well-known/ai-plugin.json`
+- **AI Search Crawlers (GEO)**: `llms.txt`

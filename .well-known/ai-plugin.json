@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Writing Skills for AI Agents",
+  "name_for_model": "writing_style_skills",
+  "description_for_human": "14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
+  "description_for_model": "Writing Skills for AI Agents: 14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading. Tools available: search_styles, get_skill, install_skill, list_styles, skill_read, skills_list",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://writing-skills.builditwithai.xyz/openapi.json"
+  },
+  "logo_url": "https://writing-skills.builditwithai.xyz/logo.png",
+  "contact_email": "support@builditwithai.xyz",
+  "legal_info_url": "https://writing-skills.builditwithai.xyz/legal"
+}
