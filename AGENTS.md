@@ -1,77 +1,81 @@
-# AGENTS.md — Agent Operational Manual
+# AGENTS.md — Codebase Operational Guide for AI Agents
 
-> **Canonical context and operating procedures for AI agents (Claude Code, Cursor, Codex, Gemini, Antigravity, OpenCode, Aider) operating on or integrating `writing-style-skills`.**
-
----
-
-## 1. System Identity & Mission
-
-- **Repository**: `surendranb/writing-skills`
-- **Package Name**: `writing-skills` (PyPI) / `writing-skills` (NPM)
-- **Live Portal**: [https://writing-skills.builditwithai.xyz](https://writing-skills.builditwithai.xyz)
-- **Purpose**: 14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.
+> **Context, architecture, file map, and execution commands for AI coding agents (Claude Code, Cursor, Codex, Gemini, Antigravity, OpenCode, Aider) working on `writing-style-skills`.**
 
 ---
 
-## 2. Quickstart & Invocation for Agents
+## 1. Codebase Overview
 
-Agents integrating or executing this server should use stdio transport via either runtime:
+- **Language & Runtime**: Python 3.10+ (`mcp` FastMCP) + Markdown Skills Catalog + NPM distribution wrapper.
+- **Package Name**: `writing-skills` (PyPI) / `writing-skills` (NPM).
+- **Core Function**: Serves 14 production writing-style skills (7 measurable frameworks + 7 character voices) to AI agents via dynamic MCP tools (`search_styles`, `get_skill`, `install_skill`, `skill_read`) and the Skills CLI.
 
-```bash
-# Python runtime (FastMCP / stdio)
-uvx --from writing-skills writing-skills-mcp
+---
 
-# Universal 1-line auto-installer
-curl -fsSL "https://writing-skills.builditwithai.xyz/install" | bash
+## 2. Directory & File Map
+
 ```
-
-### Environment Variables
-- None required (Zero configuration needed).
-
-
----
-
-## 3. Tool Reference & Capabilities
-
-| Tool | Capability Summary |
-|---|---|
-| `search_styles` | Searches 14+ writing frameworks and character personas. |
-| `get_skill` | Retrieves the full procedural markdown playbook (SKILL.md). |
-| `install_skill` | Installs style playbook into agent active workspace. |
-| `list_styles` | Lists all available styles and frameworks. |
-| `skill_read` | Loads style playbooks dynamically from GitHub. |
-| `skills_list` | Lists all available skills. |
-
----
-
-## 4. Agent Working Laws (Operational Rules)
-
-When contributing code, diagnosing bugs, or modifying this repository, all visiting agents must adhere strictly to these rules:
-
-1. **Truth Over Guessing**: Never fabricate responses, schema types, or error reasons. Run native verification scripts before asserting completion.
-2. **Shortest Working Diff (Lazy Senior Dev)**: Do not introduce unrequested abstractions, extra dependencies, or architectural bloat. Standard library and native platform features first.
-3. **Preserve Schema Stability**: Never remove or rename existing MCP tool parameters without strict backwards-compatibility layers.
-4. **Strict Telemetry Boundaries**: Diagnostic telemetry is non-PII and strictly opt-out. Never log user queries, credentials, file contents, or environment variables. Honor `DO_NOT_TRACK=1` and `MCP_TELEMETRY_OPT_OUT=1`.
-5. **No Direct Main Commits**: Always create a feature or fix branch before modifying code.
-
----
-
-## 5. Verification & Test Protocol
-
-Before marking any task as complete in this repository, run the test suite:
-
-```bash
-# Run automated verification suite
-uv run pytest -v || python3 -m unittest
+writing-style-skills/
+├── src/writing_skills_mcp/
+│   ├── server.py              # FastMCP server, tool implementations (get_skill, install_skill, search_styles)
+│   └── telemetry.py           # Edge Schema v2 telemetry client
+├── skills/                    # 14 Production SKILL.md procedural playbooks
+│   ├── plain-language/SKILL.md         # Federal plain language guidelines (8th-grade reading level)
+│   ├── business-writing/SKILL.md       # BLUF (Bottom Line Up Front) executive memos
+│   ├── corporate-communication/SKILL.md# Stakeholder comms, change management, crisis memos
+│   ├── gov-uk-style/SKILL.md           # GOV.UK style manual standards
+│   ├── asd-ste100/SKILL.md             # Simplified Technical English standard
+│   ├── google-dev-docs/SKILL.md        # Google Developer Documentation style guide
+│   ├── journalism-ap/SKILL.md          # Associated Press inverted pyramid journalism
+│   ├── ted-lasso/SKILL.md              # Relentless optimism & folksy Midwestern analogies
+│   ├── jack-sparrow/SKILL.md           # Flamboyant pirate cadence & witty redirection
+│   ├── shrek/SKILL.md                  # Grumpy swamp ogre with heart of gold
+│   ├── yoda/SKILL.md                   # Inverted OSV syntax & profound Jedi wisdom
+│   ├── winnie-the-pooh/SKILL.md        # Gentle, thoughtful, honey-loving prose
+│   ├── paddington/SKILL.md             # Polite British bear manners & marmalade notes
+│   └── bob-ross/SKILL.md               # Calming, encouraging painting analogies ("happy accidents")
+├── scripts/
+│   └── validate_skills.py     # Linter & validator verifying frontmatter, headers, and rules across all skills
+├── exhaustive-styles.json     # Comprehensive catalog of writing styles and personas
+├── pyproject.toml             # Python packaging metadata (writing-skills)
+├── package.json               # NPM packaging metadata (writing-skills)
+├── smithery.yaml              # Smithery.ai marketplace configuration
+├── server.json                # Official MCP registry specification
+├── gemini-extension.json      # Google Gemini / Antigravity extension manifest
+├── .claude-plugin/            # Claude Code plugin manifests (plugin.json, marketplace.json)
+└── .well-known/ai-plugin.json # OpenAI / ChatGPT Actions manifest
 ```
 
 ---
 
-## 6. Plugin & Marketplace Discovery Pointers
+## 3. Development & Testing Commands
 
-- **Claude Code**: `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`
-- **Gemini CLI / Antigravity**: `gemini-extension.json`
-- **Smithery.ai**: `smithery.yaml`
-- **Official MCP Registry & Glama**: `server.json`
-- **OpenAI / ChatGPT Actions**: `.well-known/ai-plugin.json`
-- **AI Search Crawlers (GEO)**: `llms.txt`
+```bash
+# Install dependencies in editable mode
+uv sync || pip install -e ".[dev]"
+
+# Run the MCP server locally in stdio mode
+uv run python -m writing_skills_mcp.server
+
+# Validate and lint all SKILL.md files
+python3 scripts/validate_skills.py
+
+# Run the test suite
+uv run pytest tests/ -v
+```
+
+---
+
+## 4. Skill Authoring Invariants & Gotchas
+
+1. **SKILL.md Standard Structure**:
+   - Every skill inside `skills/<slug>/SKILL.md` MUST contain:
+     - YAML frontmatter with `name`, `description`, `version`, `author`, `tags`.
+     - `# Context & Purpose`
+     - `# Core Principles & Rules` (with exact measurable rules).
+     - `# Examples` (Before vs. After).
+     - `# Verification Checklist` (Self-auditing criteria for the agent).
+2. **Validation Script (`scripts/validate_skills.py`)**:
+   - Always run `python3 scripts/validate_skills.py` after creating or editing any `SKILL.md`. CI enforces 100% passing validation before publishing.
+3. **Workspace Skill Installation (`install_skill`)**:
+   - `install_skill(style_name)` writes the procedural markdown file directly into the target agent harness directory (e.g. `~/.config/opencode/skills/` or `.gemini/skills/`).
