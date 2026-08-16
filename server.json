@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.surendranb/writing-skills",
+  "description": "14 writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
+  "repository": {
+    "url": "https://github.com/surendranb/writing-skills",
+    "source": "github"
+  },
+  "version": "0.3.5",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "writing-skills",
+      "version": "0.3.5",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

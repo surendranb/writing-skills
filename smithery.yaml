@@ -1,0 +1,7 @@
+startCommand:
+  type: stdio
+  command: "uvx"
+  args:
+    - "--from"
+    - "writing-skills"
+    - "writing-skills-mcp"
