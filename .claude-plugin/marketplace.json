@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
-    "version": "0.3.5"
+    "version": "0.4.0"
   },
   "plugins": [
     {

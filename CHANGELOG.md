@@ -1,65 +1,16 @@
 # Changelog
 
-## 0.3.4 (2026-08-15)
+## 0.4.0 (2026-08-17)
 
-- **Added** `mcp_server_name: "writing-skills-mcp"` to every event (SUR-42
-  pattern) so writing-skills events are distinguishable in the shared
-  PostHog project.
+- The MCP server and registry manifests moved to their own project,
+  [writing-skills-mcp](https://github.com/surendranb/writing-skills-mcp).
+- The Claude Code plugin manifest no longer configures a server.
+- npm and PyPI packages contain `plugin.json` and `skills/` only.
 
-## 0.3.3 (2026-08-15)
+## 0.3.0 – 0.3.5 (2026-08-15)
 
-- **Added** Cloudflare relay worker (`workers/install-telemetry/`, SUR-88
-  pattern): `/e` ingests events, caps per distinct_id/IP, stamps CF edge
-  props (`$ip`, `cf_asn`, `cf_as_organization`, `cf_colo`,
-  `cf_verified_bot`, `cf_bot_score`, `cf_edge_country` — no `$geoip_*`),
-  forwards to PostHog. Root: `writing-skills.builditwithai.xyz` (SUR-267
-  Phase 2 "Worker relay").
-- **Enabled** telemetry by default: client now POSTs to the relay gateway
-  (env `WRITING_SKILLS_TELEMETRY_URL` overrides); opt-out unchanged
-  (`WRITING_SKILLS_TELEMETRY=false`, `DO_NOT_TRACK`, `NO_TELEMETRY`).
-- **Added** product User-Agent (`writing-skills-mcp/<version>`) so the
-  client passes the relay's default-library-UA rejection, and
-  `$process_person_profile: false` (no PostHog person profiles).
-- **Fixed** `__version__` drift: `writing_skills_mcp/__init__.py` was still
-  `0.3.0` while manifests were at 0.3.2; now in sync with all manifests.
-
-## 0.3.2 (2026-08-15)
-
-- **Added** `mcpServers` to `.claude-plugin/plugin.json` — installing the
-  plugin now auto-wires the `writing-skills-mcp` server (via `uvx`) in
-  Claude Code; no separate MCP config step.
-- **Added** `mcp.json` (Agent Plugins 1.0 schema) at plugin root for
-  Codex/Kiro/Cursor-class clients.
-- **Added** `.claude-plugin/` + `mcp.json` to the npm package files (npm
-  consumers previously got the Codex manifest only, never the Claude one).
-
-## 0.3.1 (2026-08-15)
-
-- **Fixed** bundled-catalog fallback on installed wheels: `BUNDLE_ROOT` probing
-  now walks both parents (editable-checkout and nested site-packages layouts).
-  v0.3.0's fallback only worked from a repo checkout — `uvx` installs broke
-  offline discovery.
-
-## 0.3.0 (2026-08-15)
-
-MCP skill registry: unlimited skills, live from GitHub, no re-installs.
-
-- **Added** `writing-skills-mcp` server (`uvx writing-skills-mcp`): tools
-  `search_styles` (ranked match over the full catalog),
-  `get_skill` (full SKILL.md for shipped skills; catalog-only styles flagged),
-  `install_skill` (downloads + writes into a harness skills dir).
-- **Added** GitHub-backed discovery: index and skills fetched live from
-  `main` — adding a skill is one commit, no package update ever needed for
-  users. Bundled package data is the offline fallback.
-- **Added** anonymous telemetry client (SUR-86 pattern): `server_first_install` /
-  `mcp_started` / `tool_executed`, install id in `~/.writing-skills/`, envoy
-  opt-out (`WRITING_SKILLS_TELEMETRY=false`, `DO_NOT_TRACK`), zero PII; only
-  active when `WRITING_SKILLS_TELEMETRY_URL` is set. Worker relay + PostHog
-  wiring lands next.
-- **Added** CI check: `exhaustive-styles.json` shipped flags must match
-  `skills/` folders (the discovery index never goes stale).
-- **Changed** PyPI package becomes real: console script, `mcp` dependency,
-  catalog ships in both npm and PyPI artifacts.
+- Added an MCP server and registry manifests (moved to their own project in
+  0.4.0 — see [writing-skills-mcp](https://github.com/surendranb/writing-skills-mcp)).
 
 ## 0.2.0 (2026-08-14)
 

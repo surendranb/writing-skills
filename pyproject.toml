@@ -4,12 +4,11 @@ build-backend = "hatchling.build"
 
 [project]
 name = "writing-skills"
-version = "0.3.5"
-description = "Procedural writing-style skills for AI agents — official frameworks, not vibes."
+version = "0.4.0"
+description = "Procedural writing-style skills for AI agents — official frameworks, not vibes. Plain SKILL.md files."
 readme = "README.md"
 license = { text = "MIT" }
-requires-python = ">=3.10"
-dependencies = ["mcp>=2.0"]
+requires-python = ">=3.9"
 authors = [{ name = "Surendran B" }]
 keywords = ["agent-skills", "writing", "writing-style", "voice", "copywriting", "opencode", "claude-code"]
 
@@ -17,19 +16,6 @@ keywords = ["agent-skills", "writing", "writing-style", "voice", "copywriting", 
 Homepage = "https://github.com/surendranb/writing-skills"
 Repository = "https://github.com/surendranb/writing-skills"
 
-[project.scripts]
-writing-skills-mcp = "writing_skills_mcp.server:main"
-
 [tool.hatch.build.targets.wheel]
-packages = ["src/writing_skills_mcp"]
-
-[tool.hatch.build.targets.sdist]
-[tool.hatch.build.targets.sdist.force-include]
-"plugin.json" = "plugin.json"
-"skills" = "skills"
-"exhaustive-styles.json" = "exhaustive-styles.json"
-
-[tool.hatch.build.targets.wheel.force-include]
-"plugin.json" = "plugin.json"
-"skills" = "skills"
-"exhaustive-styles.json" = "exhaustive-styles.json"
+packages = []
+force-include = { "plugin.json" = "plugin.json", "skills" = "skills" }

@@ -1,76 +1,50 @@
-# AGENTS.md — Agent Operating Manual
+# AGENTS.md — writing-skills
 
-> **For AI Agents (Claude Code, Cursor, Codex, Gemini, Antigravity, OpenCode, Aider) connecting to or executing `writing-style-skills`.**
+Repo map and contracts for agents working in this repository.
 
----
+## What this is
 
-## ⚡ 1. Fast Install & Client Wiring (Start Here)
+14 writing-style skills as `SKILL.md` files: 7 **frameworks** (measurable
+standards with hard checks) and 7 **voices** (character registers with
+mechanical rules). Pure text — this repo contains skills and their packaging,
+nothing else.
 
-In 90% of cases, you just need to install and configure this MCP server for your user:
+## Layout
 
-```bash
-# 1-Line Universal Auto-Installer (Configures Claude Code, Cursor, Claude Desktop & Antigravity)
-curl -fsSL "https://writing-skills.builditwithai.xyz/install" | bash
-
-# Or install via Skills CLI:
-npx skills add writing-skills
-
-# Or launch directly via stdio:
-uvx --from writing-skills writing-skills-mcp
-npx -y writing-skills
+```
+skills/<name>/SKILL.md      one skill per folder; frontmatter name == folder name
+.claude-plugin/             Claude Code marketplace + plugin manifests
+plugin.json                 Agent Plugins 1.0 manifest (Codex, Kiro, ...)
+package.json / pyproject.toml   npm / PyPI packaging (plugin.json + skills/ only)
+template/SKILL.md           skeleton for new skills
+scripts/validate_skills.py  the CI gate — run it before any commit
 ```
 
-### Client Config Snippet (`mcp.json` / `claude_desktop_config.json`)
-```json
-{
-  "mcpServers": {
-    "writing-skills": {
-      "command": "uvx",
-      "args": ["--from", "writing-skills", "writing-skills-mcp"]
-    }
-  }
-}
-```
+## The skill anatomy contract (enforced by CI)
 
----
+1. Frontmatter: `name` matching the folder; `description` >= 80 chars containing
+   "Use when" with concrete trigger phrases.
+2. `## The core rule` — one bolded sentence that IS the skill, plus a workflow line.
+3. `## Mechanics` — numbered, each one verifiable (a cap, a ban list, a ratio).
+4. `## Verify` — the checklist an agent must pass before delivering.
+5. `## Do not` — the anti-patterns.
+6. At least two before/after transform examples.
+7. Total length <= 120 lines.
 
-## 📖 2. What This Repo Is
+Framework skills must cite the real standard and match it — verify rules
+against the source, not memory. Fidelity errors are bugs.
 
-A library of **14 production writing-style skills and character frameworks** for AI agents. It replaces generic "be concise" prompts with verifiable, procedural Markdown playbooks (`SKILL.md`).
+## Working here
 
-### Primary Tools Available:
-- `search_styles`: Search 14+ writing frameworks and character personas.
-- `get_skill`: Retrieve the full procedural playbook (`SKILL.md`) for any style.
-- `install_skill`: Automatically install a style playbook into your active workspace (`.gemini/skills/` or `~/.config/opencode/skills/`).
-- `list_styles`: List all available framework slugs.
+- Validate after any change: `python3 scripts/validate_skills.py`
+- New skill: copy `template/SKILL.md` into `skills/<name>/`, fill it, add the
+  path to `.claude-plugin/marketplace.json`, validate.
+- Keep this repo skills-only: no servers, no scripts beyond the validator,
+  no config that runs anything on install.
 
----
+## Releases
 
-## 👤 3. How to Handle the Human
-
-- **Zero Credentials Needed**: No API keys required.
-- **Skill Activation**: When a user asks you to write something in a specific tone (e.g. executive memo, dev docs, plain language, or in the voice of Yoda/Ted Lasso):
-  1. Call `get_skill(style_name="...")` to load the exact rules into your context.
-  2. Follow the `# Core Principles & Rules` and check your draft against the `# Verification Checklist` before outputting text.
-
----
-
-## 🎭 4. Available Styles & Playbooks
-
-### Measurable Frameworks
-- `plain-language`: Federal plain language guidelines, 8th-grade readability, active voice.
-- `business-writing`: BLUF (Bottom Line Up Front), structured executive memos, decision-oriented.
-- `corporate-communication`: Change management, crisis memos, internal announcements.
-- `gov-uk-style`: GOV.UK style manual standards for public clarity.
-- `asd-ste100`: Simplified Technical English for aerospace, defense, and engineering manuals.
-- `google-dev-docs`: Google Developer Documentation style guide for technical references.
-- `journalism-ap`: Associated Press inverted pyramid news reporting.
-
-### Character Personas
-- `ted-lasso`: Relentless optimism, folksy Midwestern analogies, biscuits-with-the-boss warmth.
-- `jack-sparrow`: Flamboyant pirate cadence, witty redirection, theatrical swagger.
-- `shrek`: Grumpy swamp ogre with a heart of gold and onion analogies.
-- `yoda`: Inverted OSV syntax, profound Jedi philosophy.
-- `winnie-the-pooh`: Gentle, thoughtful, honey-loving cozy prose.
-- `paddington`: Polite British bear manners, marmalade notes, Aunt Lucy etiquette.
-- `bob-ross`: Calming, encouraging painting analogies ("no mistakes, just happy accidents").
+Every skill addition or plugin improvement = a release: bump the version in
+plugin.json, .claude-plugin/plugin.json, .claude-plugin/marketplace.json
+(metadata.version), package.json, pyproject.toml (CI fails on mismatch);
+add a CHANGELOG entry; tag vX.Y.Z + GitHub release; `npm publish` manually.

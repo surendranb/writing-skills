@@ -1,6 +1,6 @@
 {
   "name": "writing-skills",
-  "version": "0.3.5",
+  "version": "0.4.0",
   "description": "14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
   "author": {
     "name": "Surendran B",
@@ -16,15 +16,5 @@
     "claude",
     "cursor",
     "ai-agents"
-  ],
-  "mcpServers": {
-    "writing-style-skills": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "writing-skills",
-        "writing-skills-mcp"
-      ]
-    }
-  }
+  ]
 }
