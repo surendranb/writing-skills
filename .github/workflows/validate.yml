@@ -9,6 +9,6 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate skills and manifests
         run: python3 scripts/validate_skills.py
