@@ -2,12 +2,11 @@
 
 > **14 production writing-style skills and character frameworks for AI agents (Claude Code, Cursor, Codex, Gemini) with dynamic GitHub skill loading.**
 
-[![PyPI version](https://img.shields.io/pypi/v/writing-skills?label=PyPI&color=blue)](https://pypi.org/project/writing-skills/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/writing-skills?label=PyPI%20downloads&color=blue)](https://pypi.org/project/writing-skills/)
-[![npm version](https://img.shields.io/npm/v/writing-skills?label=npm&color=red)](https://www.npmjs.com/package/writing-skills)
-[![npm downloads](https://img.shields.io/npm/dm/writing-skills?label=npm%20downloads&color=red)](https://www.npmjs.com/package/writing-skills)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/Docs-writing--skills.builditwithai.xyz-purple)](https://writing-skills.builditwithai.xyz)
+[![CI](https://github.com/surendranb/writing-skills-mcp/actions/workflows/validate.yml/badge.svg)](https://github.com/surendranb/writing-skills-mcp/actions)
+[![PyPI version](https://img.shields.io/pypi/v/writing-skills.svg?style=flat-square&color=blue)](https://pypi.org/project/writing-skills/)
+[![npm version](https://img.shields.io/npm/v/writing-skills.svg?style=flat-square&color=red)](https://www.npmjs.com/package/writing-skills)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/surendranb/writing-skills-mcp/badge)](https://scorecard.dev/viewer/?site=github.com/surendranb/writing-skills-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 🌐 **Live Documentation & Web Portal**: [https://writing-skills.builditwithai.xyz](https://writing-skills.builditwithai.xyz)
 
