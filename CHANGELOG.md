@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.5.0 (2026-08-18)
+
+- Added `scott-adams` skill: Scott Adams' simplicity-is-persuasion method —
+  curiosity-hook openers (information gap), ≤15-word single-thought sentences,
+  prune intensifiers, actor before action. Source verified against the archived
+  2007 post "The Day You Became A Better Writer" (Typepad offline since
+  2025-09-30; post preserved on web.archive.org).
+- Renamed `scott-adams-writer` → `scott-adams` (folder, frontmatter,
+  README/AGENTS lists, marketplace counts: 15 skills, 8 frameworks + 7 voices).
+- Deepened references: `gov-uk-style`, `google-dev-docs`, `asd-ste100` gained
+  verified `references/REFERENCE.md` files (primary-source depth, load on
+  demand) linked from each SKILL.md `## References` section.
+- Added `.github/workflows/publish-npm.yml`: npm publish with provenance on
+  `v*` tags (NPM_TOKEN secret). PyPI publishing continues via `release.yml`
+  (trusted publishing, no token).
+
 ## 0.4.0 (2026-08-17)
 
 - The MCP server and registry manifests moved to their own project,
