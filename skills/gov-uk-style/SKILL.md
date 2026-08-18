@@ -1,51 +1,55 @@
 ---
 name: gov-uk-style
-description: Write to the GOV.UK style guide — the gold standard of public-sector plain language — with short sentences, keyword-first headings, and ruthless simplicity. Use when the user writes public-facing content, government or civic communication, help pages, policy summaries, or wants maximum-scope readability.
+description: Use when writing public-facing content, government or civic communication, help pages, policy summaries, or content requiring maximum-scope readability according to GOV.UK standards.
+compatibility: Requires standard Markdown parser and agent context
 ---
 
 # GOV.UK Style
 
-The reader is skimming, searching, or stressed. Write so they can't miss it.
+Make complex information instantly clear, scannable, and accessible to every citizen.
 
 ## The core rule
 
-**Put the reader's keyword in the first words, the answer in the first sentence, and the content in the smallest possible space.** GOV.UK's rule of thumb: if the reader understands your first two sentences, you have done your job; everything after is detail for those who need it.
+**Start with the user's need. Sentences under 25 words, paragraphs under 5 lines, active voice, zero jargon.**
 
-Workflow: `state what the page or message is about in the title (with the real keyword)` → `answer the core question in the first paragraph` → `chunk everything else under keyword-first headings` → `cut until it hurts, then cut once more`.
+Workflow: `state user goal immediately` → `bullet points for eligibility or steps` → `plain active verbs` → `delete preamble`.
 
 ## Mechanics
 
-1. **Sentences ≤ 25 words; paragraphs ≤ 5 sentences.** Long sentences become two.
-2. **Keyword-first headings.** "Renew your passport" not "Passport renewal process". The words the user would type are the words in the heading.
-3. **First paragraph answers the core question.** No scene-setting, no "in today's fast-paced world".
-4. **The user's goal, not your department's structure.** Organize by reader task, never by org chart or legal document order.
-5. **Specific over general.** "You must apply within 30 days" not "applications must be submitted within a specified timeframe".
-6. **Address the reader as "you".** "You can appeal if you disagree with the decision."
-7. **Common words; explain unavoidable ones on first use.** No Latinates, no "utilise/pursuant/henceforth".
-8. **Use lists.** Bullets and numbered steps beat paragraphs for anything a reader must scan or do.
-9. **No legal or marketing register.** Not "we are delighted to announce"; not "the provisions of Section 4(2) shall apply" without translation.
-10. **Cut words, not meaning.** "In order to" → "to". "A number of" → "some". "At this point in time" → "now".
+1. **User need first.** Every page starts with what the user can do or find.
+2. **Short sentences.** Maximum 25 words; vary length for rhythm.
+3. **Active voice.** "You must apply online" not "Applications must be submitted".
+4. **No jargon.** Replace bureaucratic terms with plain English (e.g. "pay" instead of "remuneration").
+5. **Bulleted lists for steps.** Use bullet points for conditions, steps, or requirements instead of dense paragraphs.
+6. **Bold sparingly.** Use bold only for critical warnings or key criteria.
+7. **No Latin or Latinisms.** Use "for example" instead of "e.g." and "that is" instead of "i.e.".
+8. **Anchor links.** Clear, descriptive link text that explains where the link goes.
 
 ## Verify
 
-- Longest sentence ≤ 25 words; longest paragraph ≤ 5 sentences
-- First paragraph answers the page's core question
-- Headings contain the user's likely search keywords
-- Zero words from the ban list (utilise, facilitate, commence, henceforth, aforementioned, in order to, in excess of, at this point in time)
-- Read a heading alone: does it tell the reader what to do?
+- First sentence directly addresses the user's primary intent
+- Sentences average under 20 words
+- Bullet points used for lists of 3 or more items
+- Zero Latin abbreviations (e.g., i.e., et al.)
+- Active voice used throughout
 
 ## Do not
 
-- Write for the institution instead of the reader
-- Nest information under vague headings ("Introduction", "General information", "Additional considerations")
-- Let policy complexity leak into sentence complexity
+- Use introductory throat-clearing ("It is important to note that...")
+- Assume prior knowledge of government processes
+- Write paragraphs longer than 5 lines
+- Use passive voice for user instructions
+
+## References
+
+For exact mechanical rules (numbers, dates, times, money, measurements, links, abbreviations, punctuation), read `references/REFERENCE.md` when a draft includes any of these — load on demand, not upfront.
 
 ## Example transformations
 
-**Before:** "Introduction: The Authority wishes to bring to the attention of all residents the forthcoming changes to waste collection arrangements, which will take effect from the 1st of April. It is important that residents familiarize themselves with the new schedule in order to avoid any disruption to their weekly collections."
+**Before:** "In the event that an individual wishes to make an application for financial assistance, it is required that they submit documentation demonstrating eligibility prior to the commencement of the review process."
 
-**After:** "Waste collection days are changing. From 1 April, put your bins out on a different day. Check your new collection day with your postcode. If your collection day has changed, you'll get a letter this month."
+**After:** "You must send your eligibility documents before we review your financial aid application."
 
-**Before:** "Should applicants fail to provide the requisite documentation within the stipulated period, their application shall be deemed incomplete and shall not be considered further."
+**Before:** "Users should note that e.g. tax returns must be filed by January 31st i.e. the end of the month."
 
-**After:** "You must send us your documents within 30 days. If you do not, we will close your application."
+**After:** "You must file your tax return by 31 January."
