@@ -1,52 +1,55 @@
 ---
 name: asd-ste100
-description: Write controlled, unambiguous technical prose per ASD-STE100 Simplified Technical English — the aerospace standard for maintenance manuals and technical documentation. Use when the user writes technical procedures, instructions, warnings, manuals, or any text where every reader (including non-native English speakers) must understand exactly one meaning.
+description: Use when writing technical procedures, instructions, warnings, maintenance manuals, or any text where every reader including non-native English speakers must understand exactly one meaning.
+compatibility: Requires standard Markdown parser and agent context
 ---
 
-# ASD-STE100 (Simplified Technical English)
+# ASD-STE100 Simplified Technical English
 
-One sentence, one instruction, one meaning. The standard for safety-critical documentation.
+Control vocabulary and syntax to eliminate ambiguity in technical documentation.
 
 ## The core rule
 
-**Every sentence has exactly one interpretation — because every sentence has one instruction, one approved word, and no synonyms.** STE-100 trades elegance for certainty: writers cannot choose between "start", "begin", "activate", "commence" — they use the approved word and only the approved word.
+**One word, one meaning. Imperative voice for instructions. Maximum 20 words per sentence.**
 
-Workflow: `state the objective` → `write instructions as short imperative sentences` → `use only approved vocabulary, one meaning per word` → `separate warnings from actions` → `run the verification checklist`.
+Workflow: `choose approved STE vocabulary` → `write imperative command` → `restrict sentence length to 20 words max` → `verify zero ambiguity`.
 
 ## Mechanics
 
-1. **One instruction per sentence.** "Open the valve. Wait 30 seconds. Close the valve." Never chain ("open the valve, then after waiting, close it").
-2. **Sentences ≤ 20 words** (procedures); ≤ 25 for descriptions.
-3. **Imperative mood for procedures.** "Remove the cover." — direct commands only.
-4. **One meaning per word, always.** Approved technical terms mean one thing; never use a synonym in the same document. Pick "remove" and never "detach/unfasten/take off" for the same object.
-5. **Active voice, present tense.** "The pump moves the fluid" not "the fluid is moved by the pump".
-6. **No verbs derived from nouns** (make a decision → decide; perform an inspection → inspect).
-7. **Articles always required.** "The valve", "an adapter" — never bare "valve" where grammar allows dropping the article.
-8. **Warnings are exact and separate.** "WARNING: HIGH PRESSURE. Do not open the valve while the system is pressurized." Structure: warning keyword, hazard, consequence, instruction.
-9. **Numbers and units written exactly.** "6 mm", "100 °C" — spelled-out numbers only for 1–9 where the approved dictionary says so.
-10. **No idioms, no metaphor, no humor.** "It's the heart of the system" is banned. The reader may not share the culture.
+1. **Approved vocabulary.** Use only words from the ASD-STE100 dictionary or approved technical nouns.
+2. **Imperative commands.** Start steps with an action verb ("Remove the bolt", not "You should remove the bolt").
+3. **Word count limits.** Maximum 20 words for procedural sentences; maximum 25 words for descriptive sentences.
+4. **No noun clusters.** Maximum of 3 nouns in a sequence (e.g. use "valve control switch" instead of "engine fuel system valve control switch").
+5. **Present tense.** Describe current states in present tense; avoid future tense ("The light is on" not "The light will turn on").
+6. **No gerunds in titles.** Use simple nouns or infinitives for headings.
+7. **Explicit conditions.** Place conditional clauses at the beginning of the sentence ("If the pressure is low, replace the filter").
+8. **Approved modifiers.** Avoid vague adjectives like "extreme", "rapid", or "normal" unless quantified.
 
 ## Verify
 
-- Every sentence ≤ 20 words and contains exactly one instruction
-- Every sentence in active voice (no "was/were + past participle")
-- No synonyms for the same object/action anywhere in the document
-- No noun-verb constructions ("perform a test" → "test")
-- No idioms or metaphors (search for "like", "as if", figurative phrases)
-- Warnings follow the keyword-hazard-consequence-instruction shape
+- Sentences do not exceed 20 words for procedures
+- Every instruction starts with an active imperative verb
+- No noun clusters exceeding 3 words
+- All technical terms conform to standard dictionary definitions
+- Zero ambiguous pronouns (replace "it" or "they" with specific nouns)
 
 ## Do not
 
-- Chain instructions with "then/after/while" — split them
-- Use unapproved vocabulary for any safety-critical step
-- Assume a shared cultural or technical background with the reader
+- Use words with multiple meanings (e.g., use "fast" or "secure", avoid "fixed")
+- Write conditional clauses after the main action
+- Use contractions or colloquialisms
+- Use passive voice in maintenance steps
+
+## References
+
+For the enforceable limits (sentence/paragraph/noun-cluster caps), safety-text structure (WARNING/CAUTION/NOTE), and punctuation rules, read `references/REFERENCE.md` when a draft is borderline or needs verification — load on demand, not upfront.
 
 ## Example transformations
 
-**Before:** "Prior to commencing the disassembly process, ensure that the pressure has been completely relieved from the system, as failure to do so may result in the sudden and dangerous release of pressurized fluid which could cause serious injury or even death."
+**Before:** "It is recommended that technicians should carefully inspect the aforementioned component assembly for any potential signs of wear prior to system operation."
 
-**After:** "WARNING: HIGH PRESSURE. The fluid in the system is under pressure. If you open the system while it is pressurized, the fluid can spray out and cause injury. 1. Turn the system OFF. 2. Wait until the pressure gauge shows zero. 3. Open the drain valve."
+**After:** "Inspect the component assembly for wear before you operate the system."
 
-**Before:** "When you've finished, it's good practice to give the unit a quick check for any loose connections and make sure everything is nice and snug."
+**Before:** "When the pressure drops too low, you might want to consider resetting the main system valve."
 
-**After:** "Check all connections. Tighten any loose connection. Make sure each connection is secure."
+**After:** "If the pressure is low, reset the main valve."

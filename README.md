@@ -4,7 +4,7 @@
 
 # writing-skills
 
-**14 writing-style skills for AI agents: 7 measurable frameworks, 7 character voices.**
+**15 writing-style skills for AI agents: 8 measurable frameworks, 7 character voices.**
 Plain `SKILL.md` files. Works in any agent that reads skills
 (Claude Code, opencode, Codex, Cursor, Kiro, Gemini).
 
@@ -54,6 +54,7 @@ Every skill ends with a `Verify` checklist the agent must pass before it deliver
 | `asd-ste100` | Simplified Technical English. One instruction per sentence, no idioms. |
 | `google-dev-docs` | Google style. Active voice, present tense, verb-first headings. |
 | `journalism-ap` | AP Stylebook. Attribution, number rules, zero editorializing. |
+| `scott-adams` | Simplicity-is-persuasion. Curiosity-hook openers, ≤15-word sentences, prune "very/really". |
 
 ### Voices — characters, rate-limited against caricature
 

@@ -5,14 +5,14 @@
     "url": "https://github.com/surendranb"
   },
   "metadata": {
-    "description": "14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
+    "description": "15 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
     "version": "0.4.0"
   },
   "plugins": [
     {
       "name": "writing-skills",
       "source": "./",
-      "description": "14 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
+      "description": "15 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
       "strict": false
     }
   ]

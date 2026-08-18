@@ -1,52 +1,55 @@
 ---
 name: google-dev-docs
-description: Write developer documentation to the Google developer documentation style guide — active voice, second person, present tense, task-oriented headings. Use when the user writes API docs, READMEs, tutorials, reference guides, error messages, or any technical content for developers.
+description: Use when writing API documentation, READMEs, tutorials, reference guides, error messages, or any technical content for developers using the Google developer documentation style guide.
+compatibility: Requires standard Markdown parser and agent context
 ---
 
-# Google Developer Docs
+# Google Developer Documentation Style
 
-Write for the developer with a question and a deadline. Clarity over cleverness, always.
+Write precise, task-oriented technical documentation with second-person address and active voice.
 
 ## The core rule
 
-**Answer the reader's question in the fewest steps, in active voice, addressed to "you", in present tense.** Developer docs are read at the moment of need: an error on screen, a deadline, a broken build. Every paragraph must justify itself against that reader.
+**Task-oriented headings, present tense, second person ("you"), active voice.**
 
-Workflow: `name the task in the heading (verb-first)` → `state what the reader will accomplish` → `give the steps in order, one action each` → `show a real example` → `note the failure modes`.
+Workflow: `state user goal in title` → `prerequisites first` → `numbered steps with concrete code examples` → `verification step`.
 
 ## Mechanics
 
-1. **Active voice always.** "The API returns a list" not "a list is returned by the API".
-2. **Address the reader as "you".** "Install the SDK" not "one installs the SDK" and never "we".
-3. **Present tense.** "The server listens on port 8080" not "will listen".
-4. **Task-oriented, verb-first headings.** "Authenticate a user" not "Authentication"; "Configure the proxy" not "Proxy configuration".
-5. **One action per step, numbered.** Steps are imperative, complete, and checkable.
-6. **Examples are real and copyable.** Include actual code/output the reader can run; never pseudo-examples for the happy path only — show the common error too.
-7. **Explain the "why" once, briefly.** One sentence of rationale per non-obvious decision; then move on.
-8. **Consistent terminology.** Pick one term per concept ("request", never "call/invoke/query" interchangeably). Include a definitions list where terms collide.
-9. **Plain language layer.** Even technical prose obeys plain-language rules: short sentences, no marketing, no "effortlessly/simply/seamlessly".
-10. **Error messages are docs too.** Say what failed, why, and how to fix: "Error: port 8080 is in use. Stop the process using it, or set PORT to a free port."
+1. **Second person.** Address the developer directly as "you"; avoid "we", "us", or third-person generalities.
+2. **Present tense.** Describe current system behavior in present tense ("Returns a 200 OK status", not "Will return").
+3. **Task-oriented headings.** Start headings with gerunds or action verbs ("Configuring authentication", not "Authentication overview").
+4. **Active voice.** "The server processes the request" rather than "The request is processed by the server".
+5. **Code blocks with context.** Every code snippet must include necessary imports, setup, and expected output.
+6. **Pronoun clarity.** Ensure "this", "that", and "it" clearly point to a preceding noun.
+7. **Consistent terminology.** Use identical terms across guides, API references, and UI labels.
+8. **Concise error messages.** Explain what went wrong and how to fix it immediately.
 
 ## Verify
 
-- Every heading starts with a verb (or a noun that is the reader's search term)
-- No passive voice (search "was/were/are + past participle")
-- No "we" referring to your org; no marketing adjectives (simple, easy, powerful, robust)
-- Every step is imperative, numbered, and results in something checkable
-- Present tense throughout (search "will ", "would ")
-- At least one runnable example per tutorial section
+- Headings use gerunds or action verbs describing tasks
+- Sentences consistently use second person ("you")
+- Code snippets are complete, syntactically valid, and tested
+- Active voice used throughout instructions
+- Present tense used for API descriptions
 
 ## Do not
 
-- Write "getting started" without stating prerequisites up front
-- Hide errors — document what breaks and why
-- Use the reader's learning time for product marketing
+- Use future tense for deterministic software behavior ("The method will return...")
+- Leave code snippets without imports or setup context
+- Use vague filler phrases ("Simply run...", "Just configure...")
+- Mix second person and first person within the same tutorial
+
+## References
+
+For exact mechanical rules (numbers, percentages, ordinals, ranges, abbreviations, units), read `references/REFERENCE.md` when a draft contains any of these — load on demand, not upfront.
 
 ## Example transformations
 
-**Before:** "In order to make use of the API, it is necessary that an API key be obtained. This can be done by navigating to the dashboard, where the key will be displayed once a project has been created. The key should then be included in the Authorization header of every request that will be made."
+**Before:** "In order to initialize our SDK, users are required to first invoke the setup method, after which time you will be able to make API requests successfully."
 
-**After:** "1. Create a project in the dashboard. 2. Copy your API key. 3. Send it with every request: Authorization: Bearer YOUR_KEY. All requests must include this header; without it, the API returns 401."
+**After:** "To initialize the SDK, call `setup()`. Once initialized, you can make API requests."
 
-**Before:** "The system is designed to facilitate seamless integration of third-party services through a robust and flexible webhook architecture."
+**Before:** "Simply add the configuration dictionary to your project and you're good to go!"
 
-**After:** "Webhooks notify you when an event happens (for example, a payment succeeds). Add your webhook URL to the dashboard, and we'll POST the event payload to it within 2 seconds."
+**After:** "Add the configuration dictionary to your project configuration file."
