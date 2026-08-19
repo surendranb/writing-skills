@@ -11,6 +11,7 @@ Plain `SKILL.md` files. Works in any agent that reads skills
 [![npm](https://img.shields.io/npm/v/writing-skills)](https://www.npmjs.com/package/writing-skills)
 [![PyPI](https://img.shields.io/pypi/v/writing-skills)](https://pypi.org/project/writing-skills/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Clones](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fsurendranb%2Fwriting-skills-mcp%2Fmain%2Fbadge%2Fclones.json)](https://github.com/surendranb/writing-skills)
 
 ## Install
 
