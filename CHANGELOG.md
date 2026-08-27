@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.1 — 2026-08-27
+
+- Codex manifest (`.codex-plugin/plugin.json`) for native skill discovery
+- Usage examples table in README
+- Manifest descriptions corrected (15 skills; skills-only identity)
+
 ## 0.5.0 (2026-08-18)
 
 - Added `scott-adams` skill: Scott Adams' simplicity-is-persuasion method —
