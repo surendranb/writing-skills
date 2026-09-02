@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.0 (2026-09-02)
+
+- Added `orwells-rules` skill: George Orwell's 6 rules for clear, honest writing
+  from his 1946 essay "Politics and the English Language" — eliminate dead
+  metaphors and clichés, short Saxon words over long Latinates, ruthless
+  cutting of verbal false limbs and operator phrases, active voice by default,
+  ban foreign phrases and jargon, and the barbarism override.
+- Updated skill count to 16 (9 frameworks + 7 voices) across all manifests
+  (`plugin.json`, `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`,
+  `package.json`, `pyproject.toml`, `README.md`, `AGENTS.md`).
+
 ## 0.5.0 (2026-08-18)
 
 - Added `scott-adams` skill: Scott Adams' simplicity-is-persuasion method —
