@@ -4,7 +4,7 @@
 
 # writing-skills
 
-**15 writing-style skills for AI agents: 8 measurable frameworks, 7 character voices.**
+**16 writing-style skills for AI agents: 9 measurable frameworks, 7 character voices.**
 Plain `SKILL.md` files. Works in any agent that reads skills
 (Claude Code, opencode, Codex, Cursor, Kiro, Gemini).
 
@@ -60,6 +60,7 @@ Every skill ends with a `Verify` checklist the agent must pass before it deliver
 
 | Skill | Enforces |
 | :--- | :--- |
+| `orwells-rules` | Orwell's 6 rules. Zero dead metaphors, short Saxon words, prune verbal limbs, active voice, barbarism override. |
 | `plain-language` | Plain Writing Act. Sentences ≤25 words, passive ≤10%, jargon ban list. |
 | `business-writing` | BLUF first line, explicit ask + deadline, buzzword ban list. |
 | `corporate-communication` | News first, reader impact named, zero euphemism. |

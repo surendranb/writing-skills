@@ -4,7 +4,7 @@ Repo map and contracts for agents working in this repository.
 
 ## What this is
 
-15 writing-style skills as `SKILL.md` files: 8 **frameworks** (measurable
+16 writing-style skills as `SKILL.md` files: 9 **frameworks** (measurable
 standards with hard checks) and 7 **voices** (character registers with
 mechanical rules). Pure text — this repo contains skills and their packaging,
 nothing else.
