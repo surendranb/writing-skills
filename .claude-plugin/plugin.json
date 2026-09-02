@@ -1,7 +1,7 @@
 {
   "name": "writing-skills",
   "version": "0.6.0",
-  "description": "16 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
+  "description": "16 production writing-style skills for AI agents: 9 measurable frameworks (plain language, ASD-STE100, AP journalism, GOV.UK, Orwell's rules) and 7 character voices, as portable SKILL.md files.",
   "author": {
     "name": "Surendran B",
     "url": "https://github.com/surendranb"
@@ -10,11 +10,14 @@
   "repository": "https://github.com/surendranb/writing-skills",
   "license": "MIT",
   "keywords": [
-    "mcp",
-    "mcp-server",
-    "model-context-protocol",
-    "claude",
-    "cursor",
-    "ai-agents"
+    "agent-skills",
+    "skills",
+    "writing",
+    "writing-style",
+    "voice",
+    "claude-code",
+    "codex",
+    "opencode",
+    "gemini-cli"
   ]
 }

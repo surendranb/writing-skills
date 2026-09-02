@@ -5,14 +5,14 @@
     "url": "https://github.com/surendranb"
   },
   "metadata": {
-    "description": "16 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
+    "description": "16 production writing-style skills for AI agents: 9 measurable frameworks (plain language, ASD-STE100, AP journalism, GOV.UK, Orwell's rules) and 7 character voices, as portable SKILL.md files.",
     "version": "0.6.0"
   },
   "plugins": [
     {
       "name": "writing-skills",
       "source": "./",
-      "description": "16 production writing-style skills and character frameworks for AI agents with dynamic GitHub skill loading.",
+      "description": "16 production writing-style skills for AI agents: 9 measurable frameworks (plain language, ASD-STE100, AP journalism, GOV.UK, Orwell's rules) and 7 character voices, as portable SKILL.md files.",
       "strict": false
     }
   ]

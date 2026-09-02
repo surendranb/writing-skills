@@ -41,6 +41,19 @@ Ask for the style. The skill loads itself.
 
 Every skill ends with a `Verify` checklist the agent must pass before it delivers.
 
+### Examples
+
+| You say | Skill that fires | What you get |
+| :--- | :--- | :--- |
+| "Simplify this insurance letter so anyone can read it" | `plain-language` | Sentences ≤25 words, passive voice stripped, jargon replaced — checked against the Plain Writing Act rules |
+| "Turn these notes into an update for my VP" | `business-writing` | BLUF first line, the ask and deadline explicit, buzzwords deleted |
+| "Write the release notes for v2.0" | `google-dev-docs` | Active voice, present tense, verb-first headings |
+| "Draft the outage announcement" | `corporate-communication` | News in line one, reader impact named, zero euphemism |
+| "Make this maintenance manual usable by non-native speakers" | `asd-ste100` | Simplified Technical English: one instruction per sentence, no idioms |
+| "Press release for the funding round, AP style" | `journalism-ap` | AP Stylebook attribution and number rules, no editorializing |
+| "Explain recursion like Bob Ross" | `bob-ross` | A happy little explanation — calm, encouraging, and technically correct |
+| "Rejection email, but make it Paddington" | `paddington` | Firm news delivered with unfailing politeness |
+
 ## The skills
 
 ### Frameworks — real standards, enforced

@@ -9,7 +9,15 @@
   ban foreign phrases and jargon, and the barbarism override.
 - Updated skill count to 16 (9 frameworks + 7 voices) across all manifests
   (`plugin.json`, `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`,
-  `package.json`, `pyproject.toml`, `README.md`, `AGENTS.md`).
+  `.codex-plugin/plugin.json`, `gemini-extension.json`, `package.json`,
+  `pyproject.toml`, `README.md`, `AGENTS.md`).
+
+## 0.5.1 (2026-08-27)
+
+- Codex manifest (`.codex-plugin/plugin.json`) for native skill discovery
+- Gemini extension manifest (`gemini-extension.json`)
+- Usage examples table in README
+- Manifest descriptions corrected (15 skills; skills-only identity)
 
 ## 0.5.0 (2026-08-18)
 
